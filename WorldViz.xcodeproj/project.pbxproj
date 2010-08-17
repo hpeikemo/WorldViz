@@ -19,35 +19,6 @@
 		F6B9E0A0121B0E8900C6056D /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F6B9E09F121B0E8900C6056D /* main.cpp */; };
 		F6CC5524121B1CB200ADBED3 /* safileio.o in Frameworks */ = {isa = PBXBuildFile; fileRef = F6CC5522121B1CB200ADBED3 /* safileio.o */; };
 		F6CC5525121B1CB200ADBED3 /* shpopen.o in Frameworks */ = {isa = PBXBuildFile; fileRef = F6CC5523121B1CB200ADBED3 /* shpopen.o */; };
-		F6CC559E121B318400ADBED3 /* COPYING in Resources */ = {isa = PBXBuildFile; fileRef = F6CC5575121B318400ADBED3 /* COPYING */; };
-		F6CC559F121B318400ADBED3 /* COPYING.GPL in Resources */ = {isa = PBXBuildFile; fileRef = F6CC5576121B318400ADBED3 /* COPYING.GPL */; };
-		F6CC55A0121B318400ADBED3 /* gewaesserflaechen.dbf in Resources */ = {isa = PBXBuildFile; fileRef = F6CC5577121B318400ADBED3 /* gewaesserflaechen.dbf */; };
-		F6CC55A1121B318400ADBED3 /* gewaesserflaechen.prj in Resources */ = {isa = PBXBuildFile; fileRef = F6CC5578121B318400ADBED3 /* gewaesserflaechen.prj */; };
-		F6CC55A2121B318400ADBED3 /* gewaesserflaechen.shp in Resources */ = {isa = PBXBuildFile; fileRef = F6CC5579121B318400ADBED3 /* gewaesserflaechen.shp */; };
-		F6CC55A3121B318400ADBED3 /* gewaesserflaechen.shx in Resources */ = {isa = PBXBuildFile; fileRef = F6CC557A121B318400ADBED3 /* gewaesserflaechen.shx */; };
-		F6CC55A4121B318400ADBED3 /* gewaesserlinien_namen.dbf in Resources */ = {isa = PBXBuildFile; fileRef = F6CC557B121B318400ADBED3 /* gewaesserlinien_namen.dbf */; };
-		F6CC55A5121B318400ADBED3 /* gewaesserlinien.dbf in Resources */ = {isa = PBXBuildFile; fileRef = F6CC557C121B318400ADBED3 /* gewaesserlinien.dbf */; };
-		F6CC55A6121B318400ADBED3 /* gewaesserlinien.prj in Resources */ = {isa = PBXBuildFile; fileRef = F6CC557D121B318400ADBED3 /* gewaesserlinien.prj */; };
-		F6CC55A7121B318400ADBED3 /* gewaesserlinien.shp in Resources */ = {isa = PBXBuildFile; fileRef = F6CC557E121B318400ADBED3 /* gewaesserlinien.shp */; };
-		F6CC55A8121B318400ADBED3 /* gewaesserlinien.shx in Resources */ = {isa = PBXBuildFile; fileRef = F6CC557F121B318400ADBED3 /* gewaesserlinien.shx */; };
-		F6CC55A9121B318400ADBED3 /* gruenflaechen_typen.dbf in Resources */ = {isa = PBXBuildFile; fileRef = F6CC5580121B318400ADBED3 /* gruenflaechen_typen.dbf */; };
-		F6CC55AA121B318400ADBED3 /* gruenflaechen.dbf in Resources */ = {isa = PBXBuildFile; fileRef = F6CC5581121B318400ADBED3 /* gruenflaechen.dbf */; };
-		F6CC55AB121B318400ADBED3 /* gruenflaechen.prj in Resources */ = {isa = PBXBuildFile; fileRef = F6CC5582121B318400ADBED3 /* gruenflaechen.prj */; };
-		F6CC55AC121B318400ADBED3 /* gruenflaechen.shp in Resources */ = {isa = PBXBuildFile; fileRef = F6CC5583121B318400ADBED3 /* gruenflaechen.shp */; };
-		F6CC55AD121B318400ADBED3 /* gruenflaechen.shx in Resources */ = {isa = PBXBuildFile; fileRef = F6CC5584121B318400ADBED3 /* gruenflaechen.shx */; };
-		F6CC55AE121B318400ADBED3 /* overview.thuban in Resources */ = {isa = PBXBuildFile; fileRef = F6CC5585121B318400ADBED3 /* overview.thuban */; };
-		F6CC55AF121B318400ADBED3 /* poi_typen.dbf in Resources */ = {isa = PBXBuildFile; fileRef = F6CC5586121B318400ADBED3 /* poi_typen.dbf */; };
-		F6CC55B0121B318400ADBED3 /* poi.dbf in Resources */ = {isa = PBXBuildFile; fileRef = F6CC5587121B318400ADBED3 /* poi.dbf */; };
-		F6CC55B1121B318400ADBED3 /* poi.prj in Resources */ = {isa = PBXBuildFile; fileRef = F6CC5588121B318400ADBED3 /* poi.prj */; };
-		F6CC55B2121B318400ADBED3 /* poi.shp in Resources */ = {isa = PBXBuildFile; fileRef = F6CC5589121B318400ADBED3 /* poi.shp */; };
-		F6CC55B3121B318400ADBED3 /* poi.shx in Resources */ = {isa = PBXBuildFile; fileRef = F6CC558A121B318400ADBED3 /* poi.shx */; };
-		F6CC55B4121B318400ADBED3 /* README in Resources */ = {isa = PBXBuildFile; fileRef = F6CC558B121B318400ADBED3 /* README */; };
-		F6CC55B5121B318400ADBED3 /* strassen_namen.dbf in Resources */ = {isa = PBXBuildFile; fileRef = F6CC558C121B318400ADBED3 /* strassen_namen.dbf */; };
-		F6CC55B6121B318400ADBED3 /* strassen_typen.dbf in Resources */ = {isa = PBXBuildFile; fileRef = F6CC558D121B318400ADBED3 /* strassen_typen.dbf */; };
-		F6CC55B7121B318400ADBED3 /* strassen.dbf in Resources */ = {isa = PBXBuildFile; fileRef = F6CC558E121B318400ADBED3 /* strassen.dbf */; };
-		F6CC55B8121B318400ADBED3 /* strassen.prj in Resources */ = {isa = PBXBuildFile; fileRef = F6CC558F121B318400ADBED3 /* strassen.prj */; };
-		F6CC55B9121B318400ADBED3 /* strassen.shp in Resources */ = {isa = PBXBuildFile; fileRef = F6CC5590121B318400ADBED3 /* strassen.shp */; };
-		F6CC55BA121B318400ADBED3 /* strassen.shx in Resources */ = {isa = PBXBuildFile; fileRef = F6CC5591121B318400ADBED3 /* strassen.shx */; };
 		F6CC55BB121B318400ADBED3 /* TM_WORLD_BORDERS_SIMPL-0.3.dbf in Resources */ = {isa = PBXBuildFile; fileRef = F6CC5592121B318400ADBED3 /* TM_WORLD_BORDERS_SIMPL-0.3.dbf */; };
 		F6CC55BC121B318400ADBED3 /* TM_WORLD_BORDERS_SIMPL-0.3.prj in Resources */ = {isa = PBXBuildFile; fileRef = F6CC5593121B318400ADBED3 /* TM_WORLD_BORDERS_SIMPL-0.3.prj */; };
 		F6CC55BD121B318400ADBED3 /* TM_WORLD_BORDERS_SIMPL-0.3.shp in Resources */ = {isa = PBXBuildFile; fileRef = F6CC5594121B318400ADBED3 /* TM_WORLD_BORDERS_SIMPL-0.3.shp */; };
@@ -63,12 +34,6 @@
 		F6CC55D0121B353000ADBED3 /* places.dbf in Resources */ = {isa = PBXBuildFile; fileRef = F6CC55CD121B353000ADBED3 /* places.dbf */; };
 		F6CC55D1121B353000ADBED3 /* places.shp in Resources */ = {isa = PBXBuildFile; fileRef = F6CC55CE121B353000ADBED3 /* places.shp */; };
 		F6CC55D2121B353000ADBED3 /* places.shx in Resources */ = {isa = PBXBuildFile; fileRef = F6CC55CF121B353000ADBED3 /* places.shx */; };
-		F6CC55D8121B35E800ADBED3 /* india-12-05.dbf in Resources */ = {isa = PBXBuildFile; fileRef = F6CC55D4121B35E800ADBED3 /* india-12-05.dbf */; };
-		F6CC55D9121B35E800ADBED3 /* india-12-05.shp in Resources */ = {isa = PBXBuildFile; fileRef = F6CC55D5121B35E800ADBED3 /* india-12-05.shp */; };
-		F6CC55DA121B35E800ADBED3 /* india-12-05.shx in Resources */ = {isa = PBXBuildFile; fileRef = F6CC55D6121B35E800ADBED3 /* india-12-05.shx */; };
-		F6CC55DB121B35E800ADBED3 /* india.xml in Resources */ = {isa = PBXBuildFile; fileRef = F6CC55D7121B35E800ADBED3 /* india.xml */; };
-		F6CC55E1121B37C700ADBED3 /* world2.shp in Resources */ = {isa = PBXBuildFile; fileRef = F6CC55DF121B37C700ADBED3 /* world2.shp */; };
-		F6CC55E2121B37C700ADBED3 /* world2.shx in Resources */ = {isa = PBXBuildFile; fileRef = F6CC55E0121B37C700ADBED3 /* world2.shx */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -88,35 +53,6 @@
 		F6CC5522121B1CB200ADBED3 /* safileio.o */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.objfile"; name = safileio.o; path = lib/shapelib/safileio.o; sourceTree = "<group>"; };
 		F6CC5523121B1CB200ADBED3 /* shpopen.o */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.objfile"; name = shpopen.o; path = lib/shapelib/shpopen.o; sourceTree = "<group>"; };
 		F6CC5530121B21DF00ADBED3 /* GLRenderSHP.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = GLRenderSHP.cpp; path = src/GLRenderSHP.cpp; sourceTree = "<group>"; };
-		F6CC5575121B318400ADBED3 /* COPYING */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = COPYING; path = Resources/COPYING; sourceTree = "<group>"; };
-		F6CC5576121B318400ADBED3 /* COPYING.GPL */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = COPYING.GPL; path = Resources/COPYING.GPL; sourceTree = "<group>"; };
-		F6CC5577121B318400ADBED3 /* gewaesserflaechen.dbf */ = {isa = PBXFileReference; lastKnownFileType = file; name = gewaesserflaechen.dbf; path = Resources/gewaesserflaechen.dbf; sourceTree = "<group>"; };
-		F6CC5578121B318400ADBED3 /* gewaesserflaechen.prj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = gewaesserflaechen.prj; path = Resources/gewaesserflaechen.prj; sourceTree = "<group>"; };
-		F6CC5579121B318400ADBED3 /* gewaesserflaechen.shp */ = {isa = PBXFileReference; lastKnownFileType = file; name = gewaesserflaechen.shp; path = Resources/gewaesserflaechen.shp; sourceTree = "<group>"; };
-		F6CC557A121B318400ADBED3 /* gewaesserflaechen.shx */ = {isa = PBXFileReference; lastKnownFileType = file; name = gewaesserflaechen.shx; path = Resources/gewaesserflaechen.shx; sourceTree = "<group>"; };
-		F6CC557B121B318400ADBED3 /* gewaesserlinien_namen.dbf */ = {isa = PBXFileReference; lastKnownFileType = file; name = gewaesserlinien_namen.dbf; path = Resources/gewaesserlinien_namen.dbf; sourceTree = "<group>"; };
-		F6CC557C121B318400ADBED3 /* gewaesserlinien.dbf */ = {isa = PBXFileReference; lastKnownFileType = file; name = gewaesserlinien.dbf; path = Resources/gewaesserlinien.dbf; sourceTree = "<group>"; };
-		F6CC557D121B318400ADBED3 /* gewaesserlinien.prj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = gewaesserlinien.prj; path = Resources/gewaesserlinien.prj; sourceTree = "<group>"; };
-		F6CC557E121B318400ADBED3 /* gewaesserlinien.shp */ = {isa = PBXFileReference; lastKnownFileType = file; name = gewaesserlinien.shp; path = Resources/gewaesserlinien.shp; sourceTree = "<group>"; };
-		F6CC557F121B318400ADBED3 /* gewaesserlinien.shx */ = {isa = PBXFileReference; lastKnownFileType = file; name = gewaesserlinien.shx; path = Resources/gewaesserlinien.shx; sourceTree = "<group>"; };
-		F6CC5580121B318400ADBED3 /* gruenflaechen_typen.dbf */ = {isa = PBXFileReference; lastKnownFileType = file; name = gruenflaechen_typen.dbf; path = Resources/gruenflaechen_typen.dbf; sourceTree = "<group>"; };
-		F6CC5581121B318400ADBED3 /* gruenflaechen.dbf */ = {isa = PBXFileReference; lastKnownFileType = file; name = gruenflaechen.dbf; path = Resources/gruenflaechen.dbf; sourceTree = "<group>"; };
-		F6CC5582121B318400ADBED3 /* gruenflaechen.prj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = gruenflaechen.prj; path = Resources/gruenflaechen.prj; sourceTree = "<group>"; };
-		F6CC5583121B318400ADBED3 /* gruenflaechen.shp */ = {isa = PBXFileReference; lastKnownFileType = file; name = gruenflaechen.shp; path = Resources/gruenflaechen.shp; sourceTree = "<group>"; };
-		F6CC5584121B318400ADBED3 /* gruenflaechen.shx */ = {isa = PBXFileReference; lastKnownFileType = file; name = gruenflaechen.shx; path = Resources/gruenflaechen.shx; sourceTree = "<group>"; };
-		F6CC5585121B318400ADBED3 /* overview.thuban */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = overview.thuban; path = Resources/overview.thuban; sourceTree = "<group>"; };
-		F6CC5586121B318400ADBED3 /* poi_typen.dbf */ = {isa = PBXFileReference; lastKnownFileType = file; name = poi_typen.dbf; path = Resources/poi_typen.dbf; sourceTree = "<group>"; };
-		F6CC5587121B318400ADBED3 /* poi.dbf */ = {isa = PBXFileReference; lastKnownFileType = file; name = poi.dbf; path = Resources/poi.dbf; sourceTree = "<group>"; };
-		F6CC5588121B318400ADBED3 /* poi.prj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = poi.prj; path = Resources/poi.prj; sourceTree = "<group>"; };
-		F6CC5589121B318400ADBED3 /* poi.shp */ = {isa = PBXFileReference; lastKnownFileType = file; name = poi.shp; path = Resources/poi.shp; sourceTree = "<group>"; };
-		F6CC558A121B318400ADBED3 /* poi.shx */ = {isa = PBXFileReference; lastKnownFileType = file; name = poi.shx; path = Resources/poi.shx; sourceTree = "<group>"; };
-		F6CC558B121B318400ADBED3 /* README */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = README; path = Resources/README; sourceTree = "<group>"; };
-		F6CC558C121B318400ADBED3 /* strassen_namen.dbf */ = {isa = PBXFileReference; lastKnownFileType = file; name = strassen_namen.dbf; path = Resources/strassen_namen.dbf; sourceTree = "<group>"; };
-		F6CC558D121B318400ADBED3 /* strassen_typen.dbf */ = {isa = PBXFileReference; lastKnownFileType = file; name = strassen_typen.dbf; path = Resources/strassen_typen.dbf; sourceTree = "<group>"; };
-		F6CC558E121B318400ADBED3 /* strassen.dbf */ = {isa = PBXFileReference; lastKnownFileType = file; name = strassen.dbf; path = Resources/strassen.dbf; sourceTree = "<group>"; };
-		F6CC558F121B318400ADBED3 /* strassen.prj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = strassen.prj; path = Resources/strassen.prj; sourceTree = "<group>"; };
-		F6CC5590121B318400ADBED3 /* strassen.shp */ = {isa = PBXFileReference; lastKnownFileType = file; name = strassen.shp; path = Resources/strassen.shp; sourceTree = "<group>"; };
-		F6CC5591121B318400ADBED3 /* strassen.shx */ = {isa = PBXFileReference; lastKnownFileType = file; name = strassen.shx; path = Resources/strassen.shx; sourceTree = "<group>"; };
 		F6CC5592121B318400ADBED3 /* TM_WORLD_BORDERS_SIMPL-0.3.dbf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "TM_WORLD_BORDERS_SIMPL-0.3.dbf"; path = "Resources/TM_WORLD_BORDERS_SIMPL-0.3.dbf"; sourceTree = "<group>"; };
 		F6CC5593121B318400ADBED3 /* TM_WORLD_BORDERS_SIMPL-0.3.prj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "TM_WORLD_BORDERS_SIMPL-0.3.prj"; path = "Resources/TM_WORLD_BORDERS_SIMPL-0.3.prj"; sourceTree = "<group>"; };
 		F6CC5594121B318400ADBED3 /* TM_WORLD_BORDERS_SIMPL-0.3.shp */ = {isa = PBXFileReference; lastKnownFileType = file; name = "TM_WORLD_BORDERS_SIMPL-0.3.shp"; path = "Resources/TM_WORLD_BORDERS_SIMPL-0.3.shp"; sourceTree = "<group>"; };
@@ -132,12 +68,6 @@
 		F6CC55CD121B353000ADBED3 /* places.dbf */ = {isa = PBXFileReference; lastKnownFileType = file; name = places.dbf; path = Resources/places.dbf; sourceTree = "<group>"; };
 		F6CC55CE121B353000ADBED3 /* places.shp */ = {isa = PBXFileReference; lastKnownFileType = file; name = places.shp; path = Resources/places.shp; sourceTree = "<group>"; };
 		F6CC55CF121B353000ADBED3 /* places.shx */ = {isa = PBXFileReference; lastKnownFileType = file; name = places.shx; path = Resources/places.shx; sourceTree = "<group>"; };
-		F6CC55D4121B35E800ADBED3 /* india-12-05.dbf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "india-12-05.dbf"; path = "Resources/india-12-05.dbf"; sourceTree = "<group>"; };
-		F6CC55D5121B35E800ADBED3 /* india-12-05.shp */ = {isa = PBXFileReference; lastKnownFileType = file; name = "india-12-05.shp"; path = "Resources/india-12-05.shp"; sourceTree = "<group>"; };
-		F6CC55D6121B35E800ADBED3 /* india-12-05.shx */ = {isa = PBXFileReference; lastKnownFileType = file; name = "india-12-05.shx"; path = "Resources/india-12-05.shx"; sourceTree = "<group>"; };
-		F6CC55D7121B35E800ADBED3 /* india.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = india.xml; path = Resources/india.xml; sourceTree = "<group>"; };
-		F6CC55DF121B37C700ADBED3 /* world2.shp */ = {isa = PBXFileReference; lastKnownFileType = file; name = world2.shp; path = Resources/world2.shp; sourceTree = "<group>"; };
-		F6CC55E0121B37C700ADBED3 /* world2.shx */ = {isa = PBXFileReference; lastKnownFileType = file; name = world2.shx; path = Resources/world2.shx; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -186,44 +116,9 @@
 		E61EEB90121AD41E00DEE5DE /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				F6CC55DF121B37C700ADBED3 /* world2.shp */,
-				F6CC55E0121B37C700ADBED3 /* world2.shx */,
-				F6CC55D4121B35E800ADBED3 /* india-12-05.dbf */,
-				F6CC55D5121B35E800ADBED3 /* india-12-05.shp */,
-				F6CC55D6121B35E800ADBED3 /* india-12-05.shx */,
-				F6CC55D7121B35E800ADBED3 /* india.xml */,
 				F6CC55CD121B353000ADBED3 /* places.dbf */,
 				F6CC55CE121B353000ADBED3 /* places.shp */,
 				F6CC55CF121B353000ADBED3 /* places.shx */,
-				F6CC5575121B318400ADBED3 /* COPYING */,
-				F6CC5576121B318400ADBED3 /* COPYING.GPL */,
-				F6CC5577121B318400ADBED3 /* gewaesserflaechen.dbf */,
-				F6CC5578121B318400ADBED3 /* gewaesserflaechen.prj */,
-				F6CC5579121B318400ADBED3 /* gewaesserflaechen.shp */,
-				F6CC557A121B318400ADBED3 /* gewaesserflaechen.shx */,
-				F6CC557B121B318400ADBED3 /* gewaesserlinien_namen.dbf */,
-				F6CC557C121B318400ADBED3 /* gewaesserlinien.dbf */,
-				F6CC557D121B318400ADBED3 /* gewaesserlinien.prj */,
-				F6CC557E121B318400ADBED3 /* gewaesserlinien.shp */,
-				F6CC557F121B318400ADBED3 /* gewaesserlinien.shx */,
-				F6CC5580121B318400ADBED3 /* gruenflaechen_typen.dbf */,
-				F6CC5581121B318400ADBED3 /* gruenflaechen.dbf */,
-				F6CC5582121B318400ADBED3 /* gruenflaechen.prj */,
-				F6CC5583121B318400ADBED3 /* gruenflaechen.shp */,
-				F6CC5584121B318400ADBED3 /* gruenflaechen.shx */,
-				F6CC5585121B318400ADBED3 /* overview.thuban */,
-				F6CC5586121B318400ADBED3 /* poi_typen.dbf */,
-				F6CC5587121B318400ADBED3 /* poi.dbf */,
-				F6CC5588121B318400ADBED3 /* poi.prj */,
-				F6CC5589121B318400ADBED3 /* poi.shp */,
-				F6CC558A121B318400ADBED3 /* poi.shx */,
-				F6CC558B121B318400ADBED3 /* README */,
-				F6CC558C121B318400ADBED3 /* strassen_namen.dbf */,
-				F6CC558D121B318400ADBED3 /* strassen_typen.dbf */,
-				F6CC558E121B318400ADBED3 /* strassen.dbf */,
-				F6CC558F121B318400ADBED3 /* strassen.prj */,
-				F6CC5590121B318400ADBED3 /* strassen.shp */,
-				F6CC5591121B318400ADBED3 /* strassen.shx */,
 				F6CC5592121B318400ADBED3 /* TM_WORLD_BORDERS_SIMPL-0.3.dbf */,
 				F6CC5593121B318400ADBED3 /* TM_WORLD_BORDERS_SIMPL-0.3.prj */,
 				F6CC5594121B318400ADBED3 /* TM_WORLD_BORDERS_SIMPL-0.3.shp */,
@@ -324,35 +219,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F6CC559E121B318400ADBED3 /* COPYING in Resources */,
-				F6CC559F121B318400ADBED3 /* COPYING.GPL in Resources */,
-				F6CC55A0121B318400ADBED3 /* gewaesserflaechen.dbf in Resources */,
-				F6CC55A1121B318400ADBED3 /* gewaesserflaechen.prj in Resources */,
-				F6CC55A2121B318400ADBED3 /* gewaesserflaechen.shp in Resources */,
-				F6CC55A3121B318400ADBED3 /* gewaesserflaechen.shx in Resources */,
-				F6CC55A4121B318400ADBED3 /* gewaesserlinien_namen.dbf in Resources */,
-				F6CC55A5121B318400ADBED3 /* gewaesserlinien.dbf in Resources */,
-				F6CC55A6121B318400ADBED3 /* gewaesserlinien.prj in Resources */,
-				F6CC55A7121B318400ADBED3 /* gewaesserlinien.shp in Resources */,
-				F6CC55A8121B318400ADBED3 /* gewaesserlinien.shx in Resources */,
-				F6CC55A9121B318400ADBED3 /* gruenflaechen_typen.dbf in Resources */,
-				F6CC55AA121B318400ADBED3 /* gruenflaechen.dbf in Resources */,
-				F6CC55AB121B318400ADBED3 /* gruenflaechen.prj in Resources */,
-				F6CC55AC121B318400ADBED3 /* gruenflaechen.shp in Resources */,
-				F6CC55AD121B318400ADBED3 /* gruenflaechen.shx in Resources */,
-				F6CC55AE121B318400ADBED3 /* overview.thuban in Resources */,
-				F6CC55AF121B318400ADBED3 /* poi_typen.dbf in Resources */,
-				F6CC55B0121B318400ADBED3 /* poi.dbf in Resources */,
-				F6CC55B1121B318400ADBED3 /* poi.prj in Resources */,
-				F6CC55B2121B318400ADBED3 /* poi.shp in Resources */,
-				F6CC55B3121B318400ADBED3 /* poi.shx in Resources */,
-				F6CC55B4121B318400ADBED3 /* README in Resources */,
-				F6CC55B5121B318400ADBED3 /* strassen_namen.dbf in Resources */,
-				F6CC55B6121B318400ADBED3 /* strassen_typen.dbf in Resources */,
-				F6CC55B7121B318400ADBED3 /* strassen.dbf in Resources */,
-				F6CC55B8121B318400ADBED3 /* strassen.prj in Resources */,
-				F6CC55B9121B318400ADBED3 /* strassen.shp in Resources */,
-				F6CC55BA121B318400ADBED3 /* strassen.shx in Resources */,
 				F6CC55BB121B318400ADBED3 /* TM_WORLD_BORDERS_SIMPL-0.3.dbf in Resources */,
 				F6CC55BC121B318400ADBED3 /* TM_WORLD_BORDERS_SIMPL-0.3.prj in Resources */,
 				F6CC55BD121B318400ADBED3 /* TM_WORLD_BORDERS_SIMPL-0.3.shp in Resources */,
@@ -368,12 +234,6 @@
 				F6CC55D0121B353000ADBED3 /* places.dbf in Resources */,
 				F6CC55D1121B353000ADBED3 /* places.shp in Resources */,
 				F6CC55D2121B353000ADBED3 /* places.shx in Resources */,
-				F6CC55D8121B35E800ADBED3 /* india-12-05.dbf in Resources */,
-				F6CC55D9121B35E800ADBED3 /* india-12-05.shp in Resources */,
-				F6CC55DA121B35E800ADBED3 /* india-12-05.shx in Resources */,
-				F6CC55DB121B35E800ADBED3 /* india.xml in Resources */,
-				F6CC55E1121B37C700ADBED3 /* world2.shp in Resources */,
-				F6CC55E2121B37C700ADBED3 /* world2.shx in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

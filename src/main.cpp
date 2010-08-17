@@ -42,12 +42,10 @@ void loadShapefile(string path) {
 
 void BasicParticleApp::setup() {    
     
-//    loadShapefile( getResourcePath("strassen.shp") );
-//    loadShapefile( getResourcePath("poi.shp") );
-//    loadShapefile( getResourcePath("gruenflaechen.shp") );
-//    loadShapefile( getResourcePath("world.shp") );
-    loadShapefile( getResourcePath("places.shp") );    
-    loadShapefile( getResourcePath("TM_WORLD_BORDERS_SIMPL-0.3.shp") );
+   // loadShapefile( getResourcePath("world.shp") );
+    // loadShapefile( getResourcePath("places.shp") );    
+    loadShapefile( getResourcePath("TM_WORLD_BORDERS-0.3.shp") );
+  //  loadShapefile( getResourcePath("TM_WORLD_BORDERS_SIMPL-0.3.shp") );
 
 }
 
