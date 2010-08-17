@@ -1,0 +1,51 @@
+// !$*UTF8*$!
+{
+	E61EEB89121AD41E00DEE5DE /* Project object */ = {
+		activeBuildConfigurationName = Debug;
+		activeExecutable = F6B9E095121B0D9F00C6056D /* WorldViz */;
+		activeTarget = E61EEB95121AD41E00DEE5DE /* WorldViz */;
+		codeSenseManager = F6B9E097121B0DCE00C6056D /* Code sense */;
+		executables = (
+			F6B9E095121B0D9F00C6056D /* WorldViz */,
+		);
+		userBuildSettings = {
+		};
+	};
+	E61EEB95121AD41E00DEE5DE /* WorldViz */ = {
+		activeExec = 0;
+		executables = (
+			F6B9E095121B0D9F00C6056D /* WorldViz */,
+		);
+	};
+	F6B9E095121B0D9F00C6056D /* WorldViz */ = {
+		isa = PBXExecutable;
+		activeArgIndices = (
+		);
+		argumentStrings = (
+		);
+		autoAttachOnCrash = 1;
+		breakpointsEnabled = 0;
+		configStateDict = {
+		};
+		customDataFormattersEnabled = 1;
+		dataTipCustomDataFormattersEnabled = 1;
+		dataTipShowTypeColumn = 1;
+		dataTipSortType = 0;
+		debuggerPlugin = GDBDebugging;
+		disassemblyDisplayState = 0;
+		enableDebugStr = 1;
+		environmentEntries = (
+		);
+		executableSystemSymbolLevel = 0;
+		executableUserSymbolLevel = 0;
+		libgmallocEnabled = 0;
+		name = WorldViz;
+		showTypeColumn = 0;
+		sourceDirectories = (
+		);
+	};
+	F6B9E097121B0DCE00C6056D /* Code sense */ = {
+		isa = PBXCodeSenseManager;
+		indexTemplatePath = "";
+	};
+}
