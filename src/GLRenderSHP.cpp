@@ -122,25 +122,35 @@ void OpenShapeFile(char* fileName)
     if(hSHP->nShapeType == SHPT_POLYGON)
     {
 		SHPObject *psShape;
-		for(int i=0;i<hSHP->nRecords;i++)
-		{
-			psShape = SHPReadObject(hSHP, i);
-      		vector<MyPoint2D> tempPointArray;
-     
-			for(int j=0;j<psShape->nVertices;j++)
-			{
-				double fX = psShape->padfX[j];
-				double fY = psShape->padfY[j];
-				MyPoint2D pt;
-				pt.dX=fX;
-				pt.dY=fY;
-      			tempPointArray.push_back(pt);
-			}
-			MyPolygon2D polygon;
-			polygon.vPointList=tempPointArray;
-			vPolygons.push_back(polygon);
-		}
+		for(int i=0;i<hSHP->nRecords;i++) {
+            psShape = SHPReadObject(hSHP, i);
 
+            for (int p=0;p<psShape->nParts;p++) {
+                vector<MyPoint2D> tempPointArray;
+                int pstart = psShape->panPartStart[p];
+                int pend;
+                if (p+1 < psShape->nParts) {
+                    pend = psShape->panPartStart[p+1];
+                } else {
+                    pend = psShape->nVertices;                    
+                }
+                for(int j=pstart;j<pend;j++) {
+                    double fX = psShape->padfX[j];
+                    double fY = psShape->padfY[j];
+                    MyPoint2D pt;
+                    pt.dX=fX;
+                    pt.dY=fY;
+                    tempPointArray.push_back(pt);
+                }
+                MyPolygon2D polygon;
+                polygon.vPointList=tempPointArray;
+                vPolygons.push_back(polygon);
+            }
+        }
+			      		            
+        cout << "Created  "<< vPolygons.size() << endl;
+
+        
     }
   
 }

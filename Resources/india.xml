@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LayerSet Name="India" ShowOnlyOneLayer="false" ShowAtStartup="false">
+<ShapeFileDescriptor ShowAtStartup="true">
+	<Name>India 12-05</Name>
+	<ShapeFilePath>ShapeFiles\india-12-05.shp</ShapeFilePath>
+	<DataKey>NAME</DataKey>
+	<ShowLabels>false</ShowLabels>
+	<ScaleColorsToData>true</ScaleColorsToData>
+	<LabelColor>
+		<Red>255</Red>
+		<Blue>100</Blue>
+		<Green>100</Green>
+		<Alpha>255</Alpha>
+	</LabelColor>
+	<LineWidth>2.5</LineWidth>
+</ShapeFileDescriptor>
+</LayerSet>

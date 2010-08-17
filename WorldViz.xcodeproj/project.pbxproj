@@ -60,6 +60,15 @@
 		F6CC55C4121B318400ADBED3 /* world.prj in Resources */ = {isa = PBXBuildFile; fileRef = F6CC559B121B318400ADBED3 /* world.prj */; };
 		F6CC55C5121B318400ADBED3 /* world.shp in Resources */ = {isa = PBXBuildFile; fileRef = F6CC559C121B318400ADBED3 /* world.shp */; };
 		F6CC55C6121B318400ADBED3 /* world.shx in Resources */ = {isa = PBXBuildFile; fileRef = F6CC559D121B318400ADBED3 /* world.shx */; };
+		F6CC55D0121B353000ADBED3 /* places.dbf in Resources */ = {isa = PBXBuildFile; fileRef = F6CC55CD121B353000ADBED3 /* places.dbf */; };
+		F6CC55D1121B353000ADBED3 /* places.shp in Resources */ = {isa = PBXBuildFile; fileRef = F6CC55CE121B353000ADBED3 /* places.shp */; };
+		F6CC55D2121B353000ADBED3 /* places.shx in Resources */ = {isa = PBXBuildFile; fileRef = F6CC55CF121B353000ADBED3 /* places.shx */; };
+		F6CC55D8121B35E800ADBED3 /* india-12-05.dbf in Resources */ = {isa = PBXBuildFile; fileRef = F6CC55D4121B35E800ADBED3 /* india-12-05.dbf */; };
+		F6CC55D9121B35E800ADBED3 /* india-12-05.shp in Resources */ = {isa = PBXBuildFile; fileRef = F6CC55D5121B35E800ADBED3 /* india-12-05.shp */; };
+		F6CC55DA121B35E800ADBED3 /* india-12-05.shx in Resources */ = {isa = PBXBuildFile; fileRef = F6CC55D6121B35E800ADBED3 /* india-12-05.shx */; };
+		F6CC55DB121B35E800ADBED3 /* india.xml in Resources */ = {isa = PBXBuildFile; fileRef = F6CC55D7121B35E800ADBED3 /* india.xml */; };
+		F6CC55E1121B37C700ADBED3 /* world2.shp in Resources */ = {isa = PBXBuildFile; fileRef = F6CC55DF121B37C700ADBED3 /* world2.shp */; };
+		F6CC55E2121B37C700ADBED3 /* world2.shx in Resources */ = {isa = PBXBuildFile; fileRef = F6CC55E0121B37C700ADBED3 /* world2.shx */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -120,6 +129,15 @@
 		F6CC559B121B318400ADBED3 /* world.prj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = world.prj; path = Resources/world.prj; sourceTree = "<group>"; };
 		F6CC559C121B318400ADBED3 /* world.shp */ = {isa = PBXFileReference; lastKnownFileType = file; name = world.shp; path = Resources/world.shp; sourceTree = "<group>"; };
 		F6CC559D121B318400ADBED3 /* world.shx */ = {isa = PBXFileReference; lastKnownFileType = file; name = world.shx; path = Resources/world.shx; sourceTree = "<group>"; };
+		F6CC55CD121B353000ADBED3 /* places.dbf */ = {isa = PBXFileReference; lastKnownFileType = file; name = places.dbf; path = Resources/places.dbf; sourceTree = "<group>"; };
+		F6CC55CE121B353000ADBED3 /* places.shp */ = {isa = PBXFileReference; lastKnownFileType = file; name = places.shp; path = Resources/places.shp; sourceTree = "<group>"; };
+		F6CC55CF121B353000ADBED3 /* places.shx */ = {isa = PBXFileReference; lastKnownFileType = file; name = places.shx; path = Resources/places.shx; sourceTree = "<group>"; };
+		F6CC55D4121B35E800ADBED3 /* india-12-05.dbf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "india-12-05.dbf"; path = "Resources/india-12-05.dbf"; sourceTree = "<group>"; };
+		F6CC55D5121B35E800ADBED3 /* india-12-05.shp */ = {isa = PBXFileReference; lastKnownFileType = file; name = "india-12-05.shp"; path = "Resources/india-12-05.shp"; sourceTree = "<group>"; };
+		F6CC55D6121B35E800ADBED3 /* india-12-05.shx */ = {isa = PBXFileReference; lastKnownFileType = file; name = "india-12-05.shx"; path = "Resources/india-12-05.shx"; sourceTree = "<group>"; };
+		F6CC55D7121B35E800ADBED3 /* india.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = india.xml; path = Resources/india.xml; sourceTree = "<group>"; };
+		F6CC55DF121B37C700ADBED3 /* world2.shp */ = {isa = PBXFileReference; lastKnownFileType = file; name = world2.shp; path = Resources/world2.shp; sourceTree = "<group>"; };
+		F6CC55E0121B37C700ADBED3 /* world2.shx */ = {isa = PBXFileReference; lastKnownFileType = file; name = world2.shx; path = Resources/world2.shx; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,6 +186,15 @@
 		E61EEB90121AD41E00DEE5DE /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				F6CC55DF121B37C700ADBED3 /* world2.shp */,
+				F6CC55E0121B37C700ADBED3 /* world2.shx */,
+				F6CC55D4121B35E800ADBED3 /* india-12-05.dbf */,
+				F6CC55D5121B35E800ADBED3 /* india-12-05.shp */,
+				F6CC55D6121B35E800ADBED3 /* india-12-05.shx */,
+				F6CC55D7121B35E800ADBED3 /* india.xml */,
+				F6CC55CD121B353000ADBED3 /* places.dbf */,
+				F6CC55CE121B353000ADBED3 /* places.shp */,
+				F6CC55CF121B353000ADBED3 /* places.shx */,
 				F6CC5575121B318400ADBED3 /* COPYING */,
 				F6CC5576121B318400ADBED3 /* COPYING.GPL */,
 				F6CC5577121B318400ADBED3 /* gewaesserflaechen.dbf */,
@@ -338,6 +365,15 @@
 				F6CC55C4121B318400ADBED3 /* world.prj in Resources */,
 				F6CC55C5121B318400ADBED3 /* world.shp in Resources */,
 				F6CC55C6121B318400ADBED3 /* world.shx in Resources */,
+				F6CC55D0121B353000ADBED3 /* places.dbf in Resources */,
+				F6CC55D1121B353000ADBED3 /* places.shp in Resources */,
+				F6CC55D2121B353000ADBED3 /* places.shx in Resources */,
+				F6CC55D8121B35E800ADBED3 /* india-12-05.dbf in Resources */,
+				F6CC55D9121B35E800ADBED3 /* india-12-05.shp in Resources */,
+				F6CC55DA121B35E800ADBED3 /* india-12-05.shx in Resources */,
+				F6CC55DB121B35E800ADBED3 /* india.xml in Resources */,
+				F6CC55E1121B37C700ADBED3 /* world2.shp in Resources */,
+				F6CC55E2121B37C700ADBED3 /* world2.shx in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

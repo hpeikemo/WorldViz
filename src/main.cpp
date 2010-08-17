@@ -42,10 +42,13 @@ void loadShapefile(string path) {
 
 void BasicParticleApp::setup() {    
     
-    loadShapefile( getResourcePath("strassen.shp") );
-    loadShapefile( getResourcePath("poi.shp") );
-    loadShapefile( getResourcePath("gruenflaechen.shp") );
-    
+//    loadShapefile( getResourcePath("strassen.shp") );
+//    loadShapefile( getResourcePath("poi.shp") );
+//    loadShapefile( getResourcePath("gruenflaechen.shp") );
+//    loadShapefile( getResourcePath("world.shp") );
+    loadShapefile( getResourcePath("places.shp") );    
+    loadShapefile( getResourcePath("TM_WORLD_BORDERS_SIMPL-0.3.shp") );
+
 }
 
 
@@ -115,7 +118,7 @@ void BasicParticleApp::draw() {
 	for(int i=0;i<vPolygons.size();i++)
 	{
 		glBegin(GL_LINE_LOOP);
-		for(int j=0;j<vPolygons[i].vPointList.size();j++) {
+		for(int j=0;j<vPolygons[i].vPointList.size();j++) {                        
 			glVertex2f(vPolygons[i].vPointList[j].dX,vPolygons[i].vPointList[j].dY);
 		}
 		

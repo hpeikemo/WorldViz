@@ -1,6 +1,7 @@
 
 #LINKOPT	=	/usr/local/lib/libdbmalloc.a
 #CFLAGS	=	-g
+CC = gcc
 
 # Endian: define either _LITTLE_ENDIAN or _BIG_ENDIAN
 ENDIAN	=	-D_LITTLE_ENDIAN
@@ -12,6 +13,8 @@ SHPOBJ	=	../shpopen.o ../dbfopen.o ../safileio.o
 SHPGOBJ =	../shpopen.o ../dbfopen.o ../safileio.o shpgeo.o
 
 GEOOBJ	=	./shpgeo.o -lm -L$(HOME)/bld/lib -lproj
+
+
 
 default:	all
 
