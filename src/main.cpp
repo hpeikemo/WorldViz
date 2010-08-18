@@ -32,6 +32,7 @@ using namespace ci::app;
 
 class BasicParticleApp : public AppBasic {
 public:	
+    void    prepareSettings( Settings* settings );
 	void	setup();
 	void	mouseDown( MouseEvent event );
 	void	keyDown( KeyEvent event );		
@@ -42,6 +43,10 @@ public:
 };
 
 
+void BasicParticleApp::prepareSettings( Settings* settings ) {
+    settings->setWindowSize( 1280 , 720 );
+    settings->setFrameRate( 60.0f );
+}
 
 void loadShapefile(string path) {
     char *cpath;
@@ -53,11 +58,10 @@ void loadShapefile(string path) {
 
 void BasicParticleApp::setup() {    
     
-   // loadShapefile( getResourcePath("world.shp") );
- //    loadShapefile( getResourcePath("places.shp") );    
-    loadShapefile( getResourcePath("TM_WORLD_BORDERS-0.3.shp") );
-  //  loadShapefile( getResourcePath("TM_WORLD_BORDERS_SIMPL-0.3.shp") );
-    
+  //loadShapefile( getResourcePath("world.shp") );
+  //loadShapefile( getResourcePath("places.shp") );    
+  //loadShapefile( getResourcePath("TM_WORLD_BORDERS-0.3.shp") );
+    loadShapefile( getResourcePath("TM_WORLD_BORDERS_SIMPL-0.3.shp") );
     
     
 }
@@ -83,19 +87,21 @@ void BasicParticleApp::resize( int width, int height ) {
     glMatrixMode(GL_PROJECTION);
     glLoadIdentity();
     gluPerspective (50.0, (float)width/(float)height, 1.5, 50);
-    gluLookAt(-20,0,0, 0,0,0, 0,1,0);    
+    gluLookAt(8,2,8, 0,0,0, 0,1,0);    
     glMatrixMode(GL_MODELVIEW);    
 }
 
-Vec3f coordinateToPoint(double x, double y) {
-    
-//    float px = 
-    float pz = cos( (x/180.0f) *M_PI ) * 100;
-    
-    Vec3f p (x,y,pz);
-            
-    return p;
+Vec3f coordinateToPoint(double x, double y) {   
+    float r  = 2.0f;
+    float p  = cos( (y/180.0f) *M_PI );
+    float pz = cos( (x/180.0f) *M_PI ) * r *p;
+    float px = sin( (x/180.0f) *M_PI ) * r *p;
+    float py = sin( (y/180.0f) *M_PI ) * r;
+    return Vec3f(px,py,pz);            
 }
+
+
+float orbitDegrees = 0.0f;
 
 void BasicParticleApp::draw() {
     
@@ -128,11 +134,43 @@ void BasicParticleApp::draw() {
     
     glPushMatrix();
     glLoadIdentity();
-    glColor3f (0.0, 1.0, 0.0);
-    glMaterialfv(GL_FRONT, GL_DIFFUSE, octa_diffuse);
-    gl::drawSphere( Vec3f(0.0f, 0.0f, 0.0f), 5.0f, 40 );
-    glPopMatrix();
     
+    orbitDegrees += 1.0f;
+    glRotatef(orbitDegrees, 0.f, 1.f, 0.f);/* orbit the Y axis */
+
+    
+    glMaterialfv(GL_FRONT, GL_DIFFUSE, octa_diffuse);
+    //gl::drawSphere( Vec3f(0.0f, 0.0f, 0.0f), 1.95f, 40 );
+
+    
+    //glDisable(GL_LIGHTING);
+    glColor3f(1.0,0.0, 0.0);
+
+    //Render Polygon Shapefile	
+	for(int i=0;i<vPolygons.size();i++)
+	{
+		glBegin(GL_LINE_LOOP);
+		for(int j=0;j<vPolygons[i].vPointList.size();j++) {    
+            Vec3f p = coordinateToPoint(vPolygons[i].vPointList[j].dX, vPolygons[i].vPointList[j].dY);
+            glVertex3f(p.x, p.y, p.z);
+		}
+		
+		glEnd();
+	}
+    /*
+    for(int i=0;i<18;i++) {
+                
+        glBegin(GL_LINE_STRIP);
+        for(int j=0;j<40;j++) {    
+            Vec3f p = coordinateToPoint(i*10,(90/40)*j );
+            glVertex3f(p.x, p.y, p.z);
+        }    
+        glEnd();
+    
+    }
+    */
+
+    glPopMatrix();
     
     /*
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
@@ -170,18 +208,6 @@ void BasicParticleApp::draw() {
 		glEnd();
 	}
 	
-	//Render Polygon Shapefile
-	glColor3f(1.0,0.0, 0.0);
-	for(int i=0;i<vPolygons.size();i++)
-	{
-		glBegin(GL_LINE_LOOP);
-		for(int j=0;j<vPolygons[i].vPointList.size();j++) {    
-            Vec3f p = coordinateToPoint(vPolygons[i].vPointList[j].dX, vPolygons[i].vPointList[j].dY);
-            glVertex3f(p.x, p.y, p.z);
-		}
-		
-		glEnd();
-	}
     
     glFlush();    
 	*/
