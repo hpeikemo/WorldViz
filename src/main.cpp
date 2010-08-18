@@ -1,17 +1,27 @@
-#include "cinder/app/AppBasic.h"
-#include "cinder/Rand.h"
-#include "cinder/Vector.h"
-#include "cinder/Perlin.h"
 #include "cinder/Color.h"
+#include "cinder/ImageIo.h"
+#include "cinder/MayaCamUI.h"
+#include "cinder/ObjLoader.h"
+#include "cinder/Perlin.h"
+#include "cinder/Rand.h"
+#include "cinder/Rect.h"
+#include "cinder/Sphere.h"
+#include "cinder/Vector.h"
+#include "cinder/app/AppBasic.h"
+#include "cinder/gl/GlslProg.h"
+#include "cinder/gl/Texture.h"
+#include "cinder/gl/Vbo.h"
 #include "cinder/gl/gl.h"
-//#include "shapelib/shapefil.h"
-#include "stdio.h"
-
-#include <list>
-#include <vector>
-#include <cstring>
-
 #include "GLRenderSHP.cpp"
+
+#include <cstring>
+#include <list>
+#include <math.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <vector>
+
+#include <GLUT/glut.h>
 
 using std::list;
 
@@ -25,6 +35,7 @@ public:
 	void	setup();
 	void	mouseDown( MouseEvent event );
 	void	keyDown( KeyEvent event );		
+    void    resize( int width, int height );
 	void	update();
 	void	draw();	
     
@@ -43,10 +54,12 @@ void loadShapefile(string path) {
 void BasicParticleApp::setup() {    
     
    // loadShapefile( getResourcePath("world.shp") );
-    // loadShapefile( getResourcePath("places.shp") );    
+ //    loadShapefile( getResourcePath("places.shp") );    
     loadShapefile( getResourcePath("TM_WORLD_BORDERS-0.3.shp") );
   //  loadShapefile( getResourcePath("TM_WORLD_BORDERS_SIMPL-0.3.shp") );
-
+    
+    
+    
 }
 
 
@@ -58,24 +71,70 @@ void BasicParticleApp::keyDown( KeyEvent event ) {
 		setFullScreen( ! isFullScreen() );
 }
 
+
+
+
 void BasicParticleApp::update() {
 
 }
 
-void BasicParticleApp::draw() {
-	
-    int w = getWindowWidth();
-    int h = getWindowHeight();
+void BasicParticleApp::resize( int width, int height ) {
+    glViewport(0, 0, (GLsizei) width, (GLsizei) height);
+    glMatrixMode(GL_PROJECTION);
+    glLoadIdentity();
+    gluPerspective (50.0, (float)width/(float)height, 1.5, 50);
+    gluLookAt(-20,0,0, 0,0,0, 0,1,0);    
+    glMatrixMode(GL_MODELVIEW);    
+}
+
+Vec3f coordinateToPoint(double x, double y) {
     
-    if(h<=0) h=1 ;
-	glViewport (0, 0, (GLsizei) w, (GLsizei) h);
-	glMatrixMode (GL_PROJECTION);
-	glLoadIdentity ();
-	//Assign Bounding Box Coordinates of Shapefile to glOrtho()
-	glOrtho(sBoundingBox.fMinX, sBoundingBox.fMaxX,sBoundingBox.fMinY,sBoundingBox.fMaxY,-1,1);
-	glMatrixMode(GL_MODELVIEW);
+//    float px = 
+    float pz = cos( (x/180.0f) *M_PI ) * 100;
+    
+    Vec3f p (x,y,pz);
+            
+    return p;
+}
+
+void BasicParticleApp::draw() {
+    
+    GLfloat mat_ambient[] = { 1.0, 1.0, 1.0, 1.0 };
+    GLfloat mat_specular[] = { 1.0, 1.0, 1.0, 1.0 };
+    GLfloat light_position[] = { 0.0, 0.0, 10.0, 1.0 };
+    GLfloat lm_ambient[] = { 0.2, 0.2, 0.2, 1.0 };
+
+    GLfloat torus_diffuse[] = { 0.7, 0.7, 0.0, 1.0 };
+    GLfloat cube_diffuse[] = { 0.0, 0.7, 0.7, 1.0 };
+    GLfloat sphere_diffuse[] = { 0.7, 0.0, 0.7, 1.0 };
+    GLfloat octa_diffuse[] = { 0.7, 0.4, 0.4, 1.0 };
 
     
+    glMaterialfv(GL_FRONT, GL_AMBIENT, mat_ambient);
+    glMaterialfv(GL_FRONT, GL_SPECULAR, mat_specular);
+    glMaterialf(GL_FRONT, GL_SHININESS, 50.0);
+    glLightfv(GL_LIGHT0, GL_POSITION, light_position);
+    glLightModelfv(GL_LIGHT_MODEL_AMBIENT, lm_ambient);
+    
+    glEnable(GL_LIGHTING);
+    glEnable(GL_LIGHT0);
+    glEnable(GL_DEPTH_TEST);
+    glShadeModel (GL_FLAT); //glShadeModel(GL_SMOOTH);
+
+    glClearColor(0.0, 0.0, 0.0, 0.0);
+    glClearAccum(0.0, 0.0, 0.0, 0.0);
+
+    glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+    
+    glPushMatrix();
+    glLoadIdentity();
+    glColor3f (0.0, 1.0, 0.0);
+    glMaterialfv(GL_FRONT, GL_DIFFUSE, octa_diffuse);
+    gl::drawSphere( Vec3f(0.0f, 0.0f, 0.0f), 5.0f, 40 );
+    glPopMatrix();
+    
+    
+    /*
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
     
     
@@ -116,17 +175,16 @@ void BasicParticleApp::draw() {
 	for(int i=0;i<vPolygons.size();i++)
 	{
 		glBegin(GL_LINE_LOOP);
-		for(int j=0;j<vPolygons[i].vPointList.size();j++) {                        
-			glVertex2f(vPolygons[i].vPointList[j].dX,vPolygons[i].vPointList[j].dY);
+		for(int j=0;j<vPolygons[i].vPointList.size();j++) {    
+            Vec3f p = coordinateToPoint(vPolygons[i].vPointList[j].dX, vPolygons[i].vPointList[j].dY);
+            glVertex3f(p.x, p.y, p.z);
 		}
 		
 		glEnd();
 	}
     
-    glFlush();
-
-    
-	
+    glFlush();    
+	*/
 }
 
 

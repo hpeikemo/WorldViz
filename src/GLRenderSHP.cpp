@@ -148,7 +148,6 @@ void OpenShapeFile(char* fileName)
             }
         }
 			      		            
-        cout << "Created  "<< vPolygons.size() << endl;
 
         
     }
