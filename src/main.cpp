@@ -22,8 +22,9 @@
 
 #include <OpenGL/glu.h>
 
-#include "ShapefileLoader.cpp"
 #include "Resources.h"
+#include "shapefile.h"
+#include "Globe.h"
 
 using std::list;
 
@@ -41,67 +42,11 @@ public:
     void    resize( int width, int height );
 	void	update();
 	void	draw();	
-    
-
+        
+    Globe           world;
 };
 
 
-
-Vec3f coordinateToPoint(double x, double y) {   
-    float r  = 2.0f;
-    float p  = cos( (y/180.0f) *M_PI );
-    float pz = cos( (x/180.0f) *M_PI ) * r *p;
-    float px = sin( (x/180.0f) *M_PI ) * r *p;
-    float py = sin( (y/180.0f) *M_PI ) * r;
-    return Vec3f(px,py,pz);            
-    //    return Vec3f(x/50,y/50,0);            
-}
-
-
-void drawShapefile(shapefileData *data) {
-    
-    //Render Polygon Shapefile	
-	for(int i=0;i<data->polygons.size();i++) {        
-        glBegin(GL_LINE_LOOP); //glBegin(GL_POLYGON);
-		for(int j=0;j<data->polygons[i].points.size();j++) {    
-            Vec3f p = coordinateToPoint(data->polygons[i].points[j].x, data->polygons[i].points[j].y);
-            glVertex3f(p.x, p.y, p.z);
-		}		
-		glEnd();
-	}
-    
-    //Render Line Shapefile
-	for(int i=0;i<data->lines.size();i++) {		
-		glBegin(GL_LINE_STRIP);
-        
-		for(int j=0;j<data->lines[i].points.size();j++) {
-            Vec3f p = coordinateToPoint(data->lines[i].points[j].x, data->lines[i].points[j].y);
-            glVertex3f(p.x, p.y, p.z);
-        }		
-        
-		glEnd();
-	}    
-    
-    //Render Point Shapefile
-    glEnable(GL_POINT_SMOOTH) ;
-	glPointSize(5.0);
-    
-//    GLfloat color[] = { 1.0, 0.0, 0.0, 1.0 };
-//	glMaterialfv(GL_FRONT, GL_DIFFUSE, color );
-    glBegin(GL_POINTS);
-	for(int i=0;i<data->points.size();i++) {
-        Vec3f p = coordinateToPoint(data->points[i].x,data->points[i].y);
-        glVertex3f(p.x, p.y, p.z);
-	}	
-	glEnd();  
-    
-}
-
-
-
-shapefileData   shapes;
-gl::GlslProg	mShader;
-GLuint          shapeDList;
 
 
 
@@ -111,37 +56,29 @@ void WorldWizApp::prepareSettings( Settings* settings ) {
 }
 
 
-void loadShapes(string path) {
+void loadShapes(string path, shapefileData *targetShape) {
     char *cpath;
     cpath = new char[path.length() + 1];
     strcpy(cpath, path.c_str());
-    loadShapefile( cpath, &shapes );
+    loadShapefile( cpath, targetShape );
 }
 
 
 void WorldWizApp::setup() {    
     
-    loadShapes( getResourcePath(RES_GLOBE_SHAPE) );
-    
-
-    
+    loadShapes( getResourcePath(RES_GLOBE_SHAPE), &world.borderShapes );
+    world.update();
+            
     try {
-        mShader = gl::GlslProg( loadResource( RES_GHOST_VERT ), loadResource( RES_GHOST_FRAG ) );
-    }
-    catch( ci::gl::GlslProgCompileExc &exc ) {
+        world.globeShader = gl::GlslProg( loadResource( RES_GHOST_VERT ), loadResource( RES_GHOST_FRAG ) );
+    } catch( ci::gl::GlslProgCompileExc &exc ) {
         std::cout << "Shader compile error: " << std::endl;
         std::cout << exc.what();
-    }
-    catch( ... ) {
+    } catch( ... ) {
         std::cout << "Unable to load shader" << std::endl;
     }
 
-    
-    
-    shapeDList = glGenLists(1);
-    glNewList(shapeDList, GL_COMPILE);
-    drawShapefile( &shapes );
-    glEndList();
+            
 
     
 }
@@ -194,24 +131,9 @@ void WorldWizApp::draw() {
     glEnable(GL_LIGHTING);
     glEnable(GL_LIGHT0);
     glEnable(GL_DEPTH_TEST);
-    glShadeModel(GL_FLAT);
-    //glShadeModel(GL_SMOOTH);
-
+    glShadeModel(GL_FLAT); //glShadeModel(GL_SMOOTH);
     
-    GLfloat mat_black[] = { 0.0, 0.0, 0.0, 0.7 };
-    glMaterialfv(GL_FRONT, GL_DIFFUSE, mat_black);
-    glMaterialfv(GL_FRONT, GL_AMBIENT, mat_black);
-    
-    mShader.bind();
-    gl::drawSphere( Vec3f(0.0f, 0.0f, 0.0f), 1.99f, 40 );    
-    mShader.unbind();
-    
-    GLfloat torus_diffuse[] = { 0.7, 0.7, 0.6, 1.0 };
-    glMaterialfv(GL_FRONT, GL_DIFFUSE, torus_diffuse);
-
-        
-//    drawShapefile( &shapes );
-    glCallList(shapeDList);
+    world.render();
         
     
     glPopMatrix();

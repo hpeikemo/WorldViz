@@ -8,33 +8,12 @@
 //Libraries Used: Shapelib
 
 
+#include "shapefile.h"
 #include <cstring>
 #include <math.h>
 #include <stdlib.h>
 #include <vector>
 #include "stdio.h"
-
-#include "shapelib/shapefil.h"
-
-
-using namespace std;
-
-struct shapePoint {
-    double x;
-    double y;    
-};
-
-struct pointList {
-    vector<shapePoint> points;    
-};
-
-struct shapefileData {
-    
-    vector<shapePoint>  points;
-    vector<pointList>   lines;
-    vector<pointList>   polygons;
-    
-};
 
 
 pointList createPointList(SHPObject *obj, int rIndex) {
