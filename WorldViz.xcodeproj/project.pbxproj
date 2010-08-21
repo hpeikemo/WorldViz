@@ -31,13 +31,6 @@
 		F6CC55C0121B318400ADBED3 /* TM_WORLD_BORDERS-0.3.prj in Resources */ = {isa = PBXBuildFile; fileRef = F6CC5597121B318400ADBED3 /* TM_WORLD_BORDERS-0.3.prj */; };
 		F6CC55C1121B318400ADBED3 /* TM_WORLD_BORDERS-0.3.shp in Resources */ = {isa = PBXBuildFile; fileRef = F6CC5598121B318400ADBED3 /* TM_WORLD_BORDERS-0.3.shp */; };
 		F6CC55C2121B318400ADBED3 /* TM_WORLD_BORDERS-0.3.shx in Resources */ = {isa = PBXBuildFile; fileRef = F6CC5599121B318400ADBED3 /* TM_WORLD_BORDERS-0.3.shx */; };
-		F6CC55C3121B318400ADBED3 /* world.dbf in Resources */ = {isa = PBXBuildFile; fileRef = F6CC559A121B318400ADBED3 /* world.dbf */; };
-		F6CC55C4121B318400ADBED3 /* world.prj in Resources */ = {isa = PBXBuildFile; fileRef = F6CC559B121B318400ADBED3 /* world.prj */; };
-		F6CC55C5121B318400ADBED3 /* world.shp in Resources */ = {isa = PBXBuildFile; fileRef = F6CC559C121B318400ADBED3 /* world.shp */; };
-		F6CC55C6121B318400ADBED3 /* world.shx in Resources */ = {isa = PBXBuildFile; fileRef = F6CC559D121B318400ADBED3 /* world.shx */; };
-		F6CC55D0121B353000ADBED3 /* places.dbf in Resources */ = {isa = PBXBuildFile; fileRef = F6CC55CD121B353000ADBED3 /* places.dbf */; };
-		F6CC55D1121B353000ADBED3 /* places.shp in Resources */ = {isa = PBXBuildFile; fileRef = F6CC55CE121B353000ADBED3 /* places.shp */; };
-		F6CC55D2121B353000ADBED3 /* places.shx in Resources */ = {isa = PBXBuildFile; fileRef = F6CC55CF121B353000ADBED3 /* places.shx */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -72,13 +65,6 @@
 		F6CC5597121B318400ADBED3 /* TM_WORLD_BORDERS-0.3.prj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "TM_WORLD_BORDERS-0.3.prj"; path = "Resources/TM_WORLD_BORDERS-0.3.prj"; sourceTree = "<group>"; };
 		F6CC5598121B318400ADBED3 /* TM_WORLD_BORDERS-0.3.shp */ = {isa = PBXFileReference; lastKnownFileType = file; name = "TM_WORLD_BORDERS-0.3.shp"; path = "Resources/TM_WORLD_BORDERS-0.3.shp"; sourceTree = "<group>"; };
 		F6CC5599121B318400ADBED3 /* TM_WORLD_BORDERS-0.3.shx */ = {isa = PBXFileReference; lastKnownFileType = file; name = "TM_WORLD_BORDERS-0.3.shx"; path = "Resources/TM_WORLD_BORDERS-0.3.shx"; sourceTree = "<group>"; };
-		F6CC559A121B318400ADBED3 /* world.dbf */ = {isa = PBXFileReference; lastKnownFileType = file; name = world.dbf; path = Resources/world.dbf; sourceTree = "<group>"; };
-		F6CC559B121B318400ADBED3 /* world.prj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = world.prj; path = Resources/world.prj; sourceTree = "<group>"; };
-		F6CC559C121B318400ADBED3 /* world.shp */ = {isa = PBXFileReference; lastKnownFileType = file; name = world.shp; path = Resources/world.shp; sourceTree = "<group>"; };
-		F6CC559D121B318400ADBED3 /* world.shx */ = {isa = PBXFileReference; lastKnownFileType = file; name = world.shx; path = Resources/world.shx; sourceTree = "<group>"; };
-		F6CC55CD121B353000ADBED3 /* places.dbf */ = {isa = PBXFileReference; lastKnownFileType = file; name = places.dbf; path = Resources/places.dbf; sourceTree = "<group>"; };
-		F6CC55CE121B353000ADBED3 /* places.shp */ = {isa = PBXFileReference; lastKnownFileType = file; name = places.shp; path = Resources/places.shp; sourceTree = "<group>"; };
-		F6CC55CF121B353000ADBED3 /* places.shx */ = {isa = PBXFileReference; lastKnownFileType = file; name = places.shx; path = Resources/places.shx; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,9 +113,6 @@
 		E61EEB90121AD41E00DEE5DE /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				F6CC55CD121B353000ADBED3 /* places.dbf */,
-				F6CC55CE121B353000ADBED3 /* places.shp */,
-				F6CC55CF121B353000ADBED3 /* places.shx */,
 				F6CC5592121B318400ADBED3 /* TM_WORLD_BORDERS_SIMPL-0.3.dbf */,
 				F6CC5593121B318400ADBED3 /* TM_WORLD_BORDERS_SIMPL-0.3.prj */,
 				F6CC5594121B318400ADBED3 /* TM_WORLD_BORDERS_SIMPL-0.3.shp */,
@@ -138,10 +121,6 @@
 				F6CC5597121B318400ADBED3 /* TM_WORLD_BORDERS-0.3.prj */,
 				F6CC5598121B318400ADBED3 /* TM_WORLD_BORDERS-0.3.shp */,
 				F6CC5599121B318400ADBED3 /* TM_WORLD_BORDERS-0.3.shx */,
-				F6CC559A121B318400ADBED3 /* world.dbf */,
-				F6CC559B121B318400ADBED3 /* world.prj */,
-				F6CC559C121B318400ADBED3 /* world.shp */,
-				F6CC559D121B318400ADBED3 /* world.shx */,
 				E61EEB9B121AD41E00DEE5DE /* WorldViz-Info.plist */,
 			);
 			name = Resources;
@@ -263,13 +242,6 @@
 				F6CC55C0121B318400ADBED3 /* TM_WORLD_BORDERS-0.3.prj in Resources */,
 				F6CC55C1121B318400ADBED3 /* TM_WORLD_BORDERS-0.3.shp in Resources */,
 				F6CC55C2121B318400ADBED3 /* TM_WORLD_BORDERS-0.3.shx in Resources */,
-				F6CC55C3121B318400ADBED3 /* world.dbf in Resources */,
-				F6CC55C4121B318400ADBED3 /* world.prj in Resources */,
-				F6CC55C5121B318400ADBED3 /* world.shp in Resources */,
-				F6CC55C6121B318400ADBED3 /* world.shx in Resources */,
-				F6CC55D0121B353000ADBED3 /* places.dbf in Resources */,
-				F6CC55D1121B353000ADBED3 /* places.shp in Resources */,
-				F6CC55D2121B353000ADBED3 /* places.shx in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
