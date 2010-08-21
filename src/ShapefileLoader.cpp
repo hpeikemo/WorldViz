@@ -4,6 +4,9 @@
 //
 //  Created by Hans Petter Eikemo on 19.08.10.
 //
+//Based on Dhulipudi Durga Prasad's (dgplinux@yahoo.com) Program to Parse ESRI Shapefile and render it in OpenGL
+//Libraries Used: Shapelib
+
 
 #include <cstring>
 #include <math.h>
@@ -15,7 +18,6 @@
 
 
 using namespace std;
-
 
 struct shapePoint {
     double x;

@@ -33,7 +33,7 @@ using namespace ci;
 using namespace ci::app;
 
 
-class BasicParticleApp : public AppBasic {
+class WorldWizApp : public AppBasic {
 public:	
     void    prepareSettings( Settings* settings );
 	void	setup();
@@ -109,7 +109,7 @@ GLuint shapeDList;
 
 
 
-void BasicParticleApp::prepareSettings( Settings* settings ) {
+void WorldWizApp::prepareSettings( Settings* settings ) {
     settings->setWindowSize( 1280 , 720 );
     settings->setFrameRate( 30.0 );
 }
@@ -125,7 +125,7 @@ void loadShapes(string path) {
 }
 
 
-void BasicParticleApp::setup() {    
+void WorldWizApp::setup() {    
     
   //loadShapefile( getResourcePath("world.shp") );
   //loadShapes( getResourcePath("places.shp") );    
@@ -141,20 +141,20 @@ void BasicParticleApp::setup() {
 }
 
 
-void BasicParticleApp::mouseDown( MouseEvent event ) {
+void WorldWizApp::mouseDown( MouseEvent event ) {
 }
 
-void BasicParticleApp::keyDown( KeyEvent event ) {
+void WorldWizApp::keyDown( KeyEvent event ) {
     
 	if( event.getChar() == 'f' )
 		setFullScreen( ! isFullScreen() );
 }
 
-void BasicParticleApp::update() {
+void WorldWizApp::update() {
 
 }
 
-void BasicParticleApp::resize( int width, int height ) {
+void WorldWizApp::resize( int width, int height ) {
     glViewport(0, 0, (GLsizei) width, (GLsizei) height);
     glMatrixMode(GL_PROJECTION);
     glLoadIdentity();
@@ -167,7 +167,7 @@ void BasicParticleApp::resize( int width, int height ) {
 
 float orbitDegrees = 0.0f;
 
-void BasicParticleApp::draw() {
+void WorldWizApp::draw() {
             
     glClearColor(0.0, 0.0, 0.0, 0.0);
     glClearAccum(0.0, 0.0, 0.0, 0.0);
@@ -211,4 +211,4 @@ void BasicParticleApp::draw() {
 }
 
 
-CINDER_APP_BASIC( BasicParticleApp, RendererGl )
+CINDER_APP_BASIC( WorldWizApp, RendererGl )

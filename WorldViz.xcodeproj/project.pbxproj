@@ -41,7 +41,6 @@
 		E61EEB99121AD41E00DEE5DE /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		E61EEB9B121AD41E00DEE5DE /* WorldViz-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "WorldViz-Info.plist"; sourceTree = "<group>"; };
 		E61EEB9C121AD41E00DEE5DE /* WorldViz_Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WorldViz_Prefix.pch; sourceTree = "<group>"; };
-		E641837C121D7CCD00F0C251 /* ShapefileLoader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ShapefileLoader.cpp; path = "/Users/hp/Dropbox/Work/C++/WorldViz/src/ShapefileLoader.cpp"; sourceTree = "<absolute>"; };
 		E64A3F60121AD8B1006DEFD1 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = Xcode4/SDKs/MacOSX10.6.sdk/System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
 		E64A3F62121AD8DF006DEFD1 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = Xcode4/SDKs/MacOSX10.6.sdk/System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		E64A3F63121AD8DF006DEFD1 /* AudioUnit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioUnit.framework; path = Xcode4/SDKs/MacOSX10.6.sdk/System/Library/Frameworks/AudioUnit.framework; sourceTree = SDKROOT; };
@@ -50,10 +49,10 @@
 		E64A3F6A121AD904006DEFD1 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = Xcode4/SDKs/MacOSX10.6.sdk/System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
 		E64A3F6C121AD916006DEFD1 /* QTKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QTKit.framework; path = Xcode4/SDKs/MacOSX10.6.sdk/System/Library/Frameworks/QTKit.framework; sourceTree = SDKROOT; };
 		E64A3F6D121AD916006DEFD1 /* QuickTime.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuickTime.framework; path = Xcode4/SDKs/MacOSX10.6.sdk/System/Library/Frameworks/QuickTime.framework; sourceTree = SDKROOT; };
+		F6B9A486121ED615008494C5 /* ShapefileLoader.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = ShapefileLoader.cpp; path = src/ShapefileLoader.cpp; sourceTree = "<group>"; };
 		F6B9E09F121B0E8900C6056D /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = main.cpp; path = src/main.cpp; sourceTree = "<group>"; };
 		F6CC5522121B1CB200ADBED3 /* safileio.o */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.objfile"; name = safileio.o; path = lib/shapelib/safileio.o; sourceTree = "<group>"; };
 		F6CC5523121B1CB200ADBED3 /* shpopen.o */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.objfile"; name = shpopen.o; path = lib/shapelib/shpopen.o; sourceTree = "<group>"; };
-		F6CC5530121B21DF00ADBED3 /* GLRenderSHP.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = GLRenderSHP.cpp; path = src/GLRenderSHP.cpp; sourceTree = "<group>"; };
 		F6CC5592121B318400ADBED3 /* TM_WORLD_BORDERS_SIMPL-0.3.dbf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "TM_WORLD_BORDERS_SIMPL-0.3.dbf"; path = "Resources/TM_WORLD_BORDERS_SIMPL-0.3.dbf"; sourceTree = "<group>"; };
 		F6CC5593121B318400ADBED3 /* TM_WORLD_BORDERS_SIMPL-0.3.prj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "TM_WORLD_BORDERS_SIMPL-0.3.prj"; path = "Resources/TM_WORLD_BORDERS_SIMPL-0.3.prj"; sourceTree = "<group>"; };
 		F6CC5594121B318400ADBED3 /* TM_WORLD_BORDERS_SIMPL-0.3.shp */ = {isa = PBXFileReference; lastKnownFileType = file; name = "TM_WORLD_BORDERS_SIMPL-0.3.shp"; path = "Resources/TM_WORLD_BORDERS_SIMPL-0.3.shp"; sourceTree = "<group>"; };
@@ -164,8 +163,7 @@
 		E64A3F1C121AD58A006DEFD1 /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				E641837C121D7CCD00F0C251 /* ShapefileLoader.cpp */,
-				F6CC5530121B21DF00ADBED3 /* GLRenderSHP.cpp */,
+				F6B9A486121ED615008494C5 /* ShapefileLoader.cpp */,
 				F6B9E09F121B0E8900C6056D /* main.cpp */,
 			);
 			name = Source;
@@ -201,6 +199,7 @@
 			};
 			buildConfigurationList = E61EEB8C121AD41E00DEE5DE /* Build configuration list for PBXProject "WorldViz" */;
 			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
