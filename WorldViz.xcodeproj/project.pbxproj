@@ -16,10 +16,11 @@
 		E64A3F6B121AD904006DEFD1 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E64A3F6A121AD904006DEFD1 /* OpenGL.framework */; };
 		E64A3F6E121AD916006DEFD1 /* QTKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E64A3F6C121AD916006DEFD1 /* QTKit.framework */; };
 		E64A3F6F121AD916006DEFD1 /* QuickTime.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E64A3F6D121AD916006DEFD1 /* QuickTime.framework */; };
-		F66A03B7121FF8A600FF5B7E /* Globe.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F66A03B5121FF8A600FF5B7E /* Globe.cpp */; };
 		F6A8A6F31220690000E74482 /* Ghost_frag.glsl in Resources */ = {isa = PBXBuildFile; fileRef = F68CA7A0121FFBE900160EB2 /* Ghost_frag.glsl */; };
 		F6A8A6F41220690300E74482 /* Ghost_vert.glsl in Resources */ = {isa = PBXBuildFile; fileRef = F68CA7A1121FFBE900160EB2 /* Ghost_vert.glsl */; };
 		F6B9E0A0121B0E8900C6056D /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F6B9E09F121B0E8900C6056D /* main.cpp */; };
+		F6C1E6E4122073B6005EA4CE /* shapefile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F6B9A486121ED615008494C5 /* shapefile.cpp */; };
+		F6C1E6E5122073BB005EA4CE /* Globe.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F66A03B5121FF8A600FF5B7E /* Globe.cpp */; };
 		F6CC5524121B1CB200ADBED3 /* safileio.o in Frameworks */ = {isa = PBXBuildFile; fileRef = F6CC5522121B1CB200ADBED3 /* safileio.o */; };
 		F6CC5525121B1CB200ADBED3 /* shpopen.o in Frameworks */ = {isa = PBXBuildFile; fileRef = F6CC5523121B1CB200ADBED3 /* shpopen.o */; };
 		F6CC55BB121B318400ADBED3 /* TM_WORLD_BORDERS_SIMPL-0.3.dbf in Resources */ = {isa = PBXBuildFile; fileRef = F6CC5592121B318400ADBED3 /* TM_WORLD_BORDERS_SIMPL-0.3.dbf */; };
@@ -52,13 +53,14 @@
 		E64A3F6A121AD904006DEFD1 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = Xcode4/SDKs/MacOSX10.6.sdk/System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
 		E64A3F6C121AD916006DEFD1 /* QTKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QTKit.framework; path = Xcode4/SDKs/MacOSX10.6.sdk/System/Library/Frameworks/QTKit.framework; sourceTree = SDKROOT; };
 		E64A3F6D121AD916006DEFD1 /* QuickTime.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuickTime.framework; path = Xcode4/SDKs/MacOSX10.6.sdk/System/Library/Frameworks/QuickTime.framework; sourceTree = SDKROOT; };
+		F608636A122078F400609F40 /* shapefile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = shapefile.h; path = src/shapefile.h; sourceTree = "<group>"; };
 		F66A03B5121FF8A600FF5B7E /* Globe.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Globe.cpp; path = src/Globe.cpp; sourceTree = "<group>"; };
 		F66A03B6121FF8A600FF5B7E /* Globe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Globe.h; path = src/Globe.h; sourceTree = "<group>"; };
 		F68CA7A0121FFBE900160EB2 /* Ghost_frag.glsl */ = {isa = PBXFileReference; lastKnownFileType = text; name = Ghost_frag.glsl; path = shaders/Ghost_frag.glsl; sourceTree = "<group>"; };
 		F68CA7A1121FFBE900160EB2 /* Ghost_vert.glsl */ = {isa = PBXFileReference; lastKnownFileType = text; name = Ghost_vert.glsl; path = shaders/Ghost_vert.glsl; sourceTree = "<group>"; };
 		F69C736D121FF3EB004F203F /* Resources.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Resources.h; path = src/Resources.h; sourceTree = "<group>"; };
 		F6A8A6E91220650500E74482 /* model.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = model.h; path = src/model.h; sourceTree = "<group>"; };
-		F6B9A486121ED615008494C5 /* ShapefileLoader.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = ShapefileLoader.cpp; path = src/ShapefileLoader.cpp; sourceTree = "<group>"; };
+		F6B9A486121ED615008494C5 /* shapefile.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = shapefile.cpp; path = src/shapefile.cpp; sourceTree = "<group>"; };
 		F6B9E09F121B0E8900C6056D /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = main.cpp; path = src/main.cpp; sourceTree = "<group>"; };
 		F6CC5522121B1CB200ADBED3 /* safileio.o */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.objfile"; name = safileio.o; path = lib/shapelib/safileio.o; sourceTree = "<group>"; };
 		F6CC5523121B1CB200ADBED3 /* shpopen.o */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.objfile"; name = shpopen.o; path = lib/shapelib/shpopen.o; sourceTree = "<group>"; };
@@ -175,7 +177,7 @@
 			isa = PBXGroup;
 			children = (
 				F66A03B5121FF8A600FF5B7E /* Globe.cpp */,
-				F6B9A486121ED615008494C5 /* ShapefileLoader.cpp */,
+				F6B9A486121ED615008494C5 /* shapefile.cpp */,
 				F6B9E09F121B0E8900C6056D /* main.cpp */,
 			);
 			name = Source;
@@ -184,6 +186,7 @@
 		F66A03AF121FF5D500FF5B7E /* Headers */ = {
 			isa = PBXGroup;
 			children = (
+				F608636A122078F400609F40 /* shapefile.h */,
 				F6A8A6E91220650500E74482 /* model.h */,
 				F66A03B6121FF8A600FF5B7E /* Globe.h */,
 				F69C736D121FF3EB004F203F /* Resources.h */,
@@ -278,7 +281,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				F6B9E0A0121B0E8900C6056D /* main.cpp in Sources */,
-				F66A03B7121FF8A600FF5B7E /* Globe.cpp in Sources */,
+				F6C1E6E4122073B6005EA4CE /* shapefile.cpp in Sources */,
+				F6C1E6E5122073BB005EA4CE /* Globe.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
