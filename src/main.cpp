@@ -13,7 +13,6 @@
 #include "cinder/gl/Vbo.h"
 #include "cinder/gl/gl.h"
 
-
 #include <cstring>
 #include <list>
 #include <math.h>
@@ -21,10 +20,10 @@
 #include <stdlib.h>
 #include <vector>
 
-//#include <GLUT/glut.h>
 #include <OpenGL/glu.h>
 
 #include "ShapefileLoader.cpp"
+#include "Resources.h"
 
 using std::list;
 
@@ -100,12 +99,9 @@ void drawShapefile(shapefileData *data) {
 
 
 
-
-
-shapefileData shapes;
-
-GLuint shapeDList;
-
+shapefileData   shapes;
+gl::GlslProg	mShader;
+GLuint          shapeDList;
 
 
 
@@ -119,18 +115,28 @@ void loadShapes(string path) {
     char *cpath;
     cpath = new char[path.length() + 1];
     strcpy(cpath, path.c_str());
-    
-//    OpenShapeFile( cpath );
     loadShapefile( cpath, &shapes );
 }
 
 
 void WorldWizApp::setup() {    
     
-  //loadShapefile( getResourcePath("world.shp") );
-  //loadShapes( getResourcePath("places.shp") );    
-  //loadShapefile( getResourcePath("TM_WORLD_BORDERS-0.3.shp") );
-    loadShapes( getResourcePath("TM_WORLD_BORDERS_SIMPL-0.3.shp") );
+    loadShapes( getResourcePath(RES_GLOBE_SHAPE) );
+    
+
+    
+    try {
+        mShader = gl::GlslProg( loadResource( RES_GHOST_VERT ), loadResource( RES_GHOST_FRAG ) );
+    }
+    catch( ci::gl::GlslProgCompileExc &exc ) {
+        std::cout << "Shader compile error: " << std::endl;
+        std::cout << exc.what();
+    }
+    catch( ... ) {
+        std::cout << "Unable to load shader" << std::endl;
+    }
+
+    
     
     shapeDList = glGenLists(1);
     glNewList(shapeDList, GL_COMPILE);
@@ -195,8 +201,11 @@ void WorldWizApp::draw() {
     GLfloat mat_black[] = { 0.0, 0.0, 0.0, 0.7 };
     glMaterialfv(GL_FRONT, GL_DIFFUSE, mat_black);
     glMaterialfv(GL_FRONT, GL_AMBIENT, mat_black);
-    gl::drawSphere( Vec3f(0.0f, 0.0f, 0.0f), 1.99f, 40 );
-
+    
+    mShader.bind();
+    gl::drawSphere( Vec3f(0.0f, 0.0f, 0.0f), 1.99f, 40 );    
+    mShader.unbind();
+    
     GLfloat torus_diffuse[] = { 0.7, 0.7, 0.6, 1.0 };
     glMaterialfv(GL_FRONT, GL_DIFFUSE, torus_diffuse);
 
