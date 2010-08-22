@@ -19,6 +19,8 @@
 		F61313821221398E00198A73 /* freshnel.fs in Resources */ = {isa = PBXBuildFile; fileRef = F61313801221398E00198A73 /* freshnel.fs */; };
 		F61313831221398E00198A73 /* freshnel.vs in Resources */ = {isa = PBXBuildFile; fileRef = F61313811221398E00198A73 /* freshnel.vs */; };
 		F64DEBC31221270900C8F125 /* hpCinderCommons.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F64DEBC11221270900C8F125 /* hpCinderCommons.cpp */; };
+		F666A15A1221965300A9ADD3 /* icon.tiff in Resources */ = {isa = PBXBuildFile; fileRef = F666A1591221965300A9ADD3 /* icon.tiff */; };
+		F666A15D122196A000A9ADD3 /* icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = F666A15C122196A000A9ADD3 /* icon.icns */; };
 		F6A8A6F31220690000E74482 /* Ghost_frag.glsl in Resources */ = {isa = PBXBuildFile; fileRef = F68CA7A0121FFBE900160EB2 /* Ghost_frag.glsl */; };
 		F6B9E0A0121B0E8900C6056D /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F6B9E09F121B0E8900C6056D /* main.cpp */; };
 		F6C1E6E4122073B6005EA4CE /* shapefile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F6B9A486121ED615008494C5 /* shapefile.cpp */; };
@@ -53,6 +55,8 @@
 		F61313811221398E00198A73 /* freshnel.vs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = freshnel.vs; path = shaders/freshnel.vs; sourceTree = "<group>"; };
 		F64DEBC11221270900C8F125 /* hpCinderCommons.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = hpCinderCommons.cpp; path = src/hpCinderCommons.cpp; sourceTree = "<group>"; };
 		F64DEBC21221270900C8F125 /* hpCinderCommons.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = hpCinderCommons.h; path = src/hpCinderCommons.h; sourceTree = "<group>"; };
+		F666A1591221965300A9ADD3 /* icon.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = icon.tiff; sourceTree = "<group>"; };
+		F666A15C122196A000A9ADD3 /* icon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = icon.icns; sourceTree = "<group>"; };
 		F66A03B5121FF8A600FF5B7E /* Globe.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Globe.cpp; path = src/Globe.cpp; sourceTree = "<group>"; };
 		F66A03B6121FF8A600FF5B7E /* Globe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Globe.h; path = src/Globe.h; sourceTree = "<group>"; };
 		F68CA7A0121FFBE900160EB2 /* Ghost_frag.glsl */ = {isa = PBXFileReference; lastKnownFileType = text; name = Ghost_frag.glsl; path = shaders/Ghost_frag.glsl; sourceTree = "<group>"; };
@@ -98,6 +102,8 @@
 		E61EEB87121AD41E00DEE5DE = {
 			isa = PBXGroup;
 			children = (
+				F666A15C122196A000A9ADD3 /* icon.icns */,
+				F666A1591221965300A9ADD3 /* icon.tiff */,
 				F68CA7A2121FFBEE00160EB2 /* Shaders */,
 				E64A3F1C121AD58A006DEFD1 /* Source */,
 				F66A03AF121FF5D500FF5B7E /* Headers */,
@@ -253,6 +259,8 @@
 				F6CC55C2121B318400ADBED3 /* TM_WORLD_BORDERS-0.3.shx in Resources */,
 				F61313821221398E00198A73 /* freshnel.fs in Resources */,
 				F61313831221398E00198A73 /* freshnel.vs in Resources */,
+				F666A15A1221965300A9ADD3 /* icon.tiff in Resources */,
+				F666A15D122196A000A9ADD3 /* icon.icns in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
