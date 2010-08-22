@@ -56,30 +56,25 @@ void WorldWizApp::prepareSettings( Settings* settings ) {
 }
 
 
-void loadShapes(string path, shapefileData *targetShape) {
-    char *cpath;
-    cpath = new char[path.length() + 1];
-    strcpy(cpath, path.c_str());
-    loadShapefile( cpath, targetShape );
-}
-
-
-void WorldWizApp::setup() {    
-    
-    loadShapes( getResourcePath(RES_GLOBE_SHAPE), &world.borderShapes );
-    world.update();
-            
+gl::GlslProg loadShader(DataSourceRef vertexShader, DataSourceRef fragmentShader = DataSourceRef(),DataSourceRef geometryShader = DataSourceRef()) {
+    gl::GlslProg shader;    
     try {
-        world.globeShader = gl::GlslProg( loadResource( RES_GHOST_VERT ), loadResource( RES_GHOST_FRAG ) );
+        shader = gl::GlslProg( vertexShader, fragmentShader, geometryShader );
     } catch( ci::gl::GlslProgCompileExc &exc ) {
         std::cout << "Shader compile error: " << std::endl;
         std::cout << exc.what();
     } catch( ... ) {
         std::cout << "Unable to load shader" << std::endl;
     }
+    return shader;
+}
 
-            
-
+void WorldWizApp::setup() {    
+    
+    loadShapefile( getResourcePath(RES_GLOBE_SHAPE), &world.borderShapes );
+    world.update();
+                
+    world.globeShader = loadShader( loadResource( RES_GHOST_VERT ), loadResource( RES_GHOST_FRAG ) );
     
 }
 

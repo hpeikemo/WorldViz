@@ -8,6 +8,7 @@
 #pragma once
 #include "shapelib/shapefil.h"
 #include <vector>
+#include <cstring>
 
 
 using namespace std;
@@ -30,3 +31,4 @@ struct shapefileData {
 };
 
 void loadShapefile( char *cpath, shapefileData *target );
+void loadShapefile( const string &path, shapefileData *target );

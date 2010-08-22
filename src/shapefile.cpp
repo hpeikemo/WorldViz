@@ -9,12 +9,17 @@
 
 
 #include "shapefile.h"
-#include <cstring>
 #include <math.h>
 #include <stdlib.h>
+#include <cstring>
+#include <string.h>
 #include <vector>
-#include "stdio.h"
+#include <stdio.h>
+#include <iostream>
 
+
+using std::string;
+using namespace std;
 
 pointList createPointList(SHPObject *obj, int rIndex) {
     int startIndex, stopIndex;
@@ -79,4 +84,9 @@ void loadShapefile( char *cpath, shapefileData *target ) {
     
 }
  
-
+void loadShapefile( const std::string &path, shapefileData *target ) {    
+    char *cpath;    
+    cpath = new char[path.length() + 1];
+    strcpy(cpath, path.c_str());
+    loadShapefile( cpath, target );
+}
