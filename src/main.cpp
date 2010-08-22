@@ -12,6 +12,8 @@
 #include "cinder/gl/Texture.h"
 #include "cinder/gl/Vbo.h"
 #include "cinder/gl/gl.h"
+#include "cinder/DataSource.h"
+
 
 #include <cstring>
 #include <list>
@@ -43,7 +45,8 @@ public:
     void    resize( int width, int height );
 	void	update();
 	void	draw();	
-        
+    void    load();
+    
     Globe           world;
 };
 
@@ -54,12 +57,22 @@ void WorldWizApp::prepareSettings( Settings* settings ) {
 }
 
 
+void WorldWizApp::load() {    
+    world.globeShader = hp::ciCommons::compileShader( loadResource( RES_GHOST_VERT ), loadResource( RES_GHOST_FRAG ) );
+    
+    //Debug:
+    /*
+    world.globeShader = hp::ciCommons::compileShader( 
+                                                     cinder::DataSourcePath::createRef( "/Users/hpe/Dropbox/Work/C++/WorldViz/shaders/freshnel.vs" ),
+                                                     cinder::DataSourcePath::createRef( "/Users/hpe/Dropbox/Work/C++/WorldViz/shaders/freshnel.fs" )); */
+}
+
 void WorldWizApp::setup() {    
     
     loadShapefile( getResourcePath(RES_GLOBE_SHAPE), &world.borderShapes );
     world.update();
                 
-    world.globeShader = hp::ciCommons::compileShader( loadResource( RES_GHOST_VERT ), loadResource( RES_GHOST_FRAG ) );
+    load();
     
 }
 
@@ -71,19 +84,22 @@ void WorldWizApp::keyDown( KeyEvent event ) {
     
 	if( event.getChar() == 'f' )
 		setFullScreen( ! isFullScreen() );
+    
+    if( event.getChar() == 'r' )
+		load();
+
 }
 
 void WorldWizApp::update() {
 
 }
 
+
+float screenAspect = 1.0f;
+
 void WorldWizApp::resize( int width, int height ) {
     glViewport(0, 0, (GLsizei) width, (GLsizei) height);
-    glMatrixMode(GL_PROJECTION);
-    glLoadIdentity();
-    gluPerspective (23.0, (float)width/(float)height, 1.5, 50);
-    gluLookAt(8,2,8, 0,0,0, 0,1,0);    
-    glMatrixMode(GL_MODELVIEW);    
+    screenAspect = (float)width/(float)height;        
 }
 
 
@@ -96,11 +112,30 @@ void WorldWizApp::draw() {
 
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
     
+    glMatrixMode(GL_PROJECTION);
+    glLoadIdentity();
+    gluPerspective (23.0, screenAspect, 0.5, 50);
+    
+    
+    //Vec3f cpos = Vec3f(cos(orbitDegrees)*12.0f ,0.0f,sin(orbitDegrees)*12.0f);
+    //gluLookAt(cpos.x,cpos.y,cpos.z, 0,0,0, 0,1,0);        
+   // cpos.x = 0;
+   // cpos.y = 0;
+   // cpos.z = 0;
+    
+    gluLookAt(0,0,0, -1,0,0, 0,1,0);    
+    
+   // world.globeShader.uniform("CAMERA_POSITION",cpos);
+    
+    glMatrixMode(GL_MODELVIEW);
+    
     glPushMatrix();
     glLoadIdentity();
     
-    orbitDegrees += 0.2f;
+    glTranslatef( -15., 0, 0 );
+    orbitDegrees += 0.1f;
     glRotatef(orbitDegrees, 0.f, 1.f, 0.5f);
+    
 
     GLfloat light_position[] = { 8.0, 8.0, 8.0, 1.0 };
     glLightfv(GL_LIGHT0, GL_POSITION, light_position);
@@ -112,8 +147,7 @@ void WorldWizApp::draw() {
     glEnable(GL_DEPTH_TEST);
     glShadeModel(GL_FLAT); //glShadeModel(GL_SMOOTH);
     
-    world.render();
-        
+    world.render();        
     
     glPopMatrix();
 

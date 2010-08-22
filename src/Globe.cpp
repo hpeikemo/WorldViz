@@ -76,12 +76,14 @@ void Globe::update() {
 void Globe::render() {
     
     globeShader.bind();
+    
     gl::drawSphere( Vec3f(0.0f, 0.0f, 0.0f), 1.999f, 40 );    
     globeShader.unbind();
 
-    GLfloat mat_black[] = { 0.0, 0.0, 0.0, 1.0 };
+    GLfloat mat_black[] = { 0.1, 0.1, 0.1, 1.0 };
+    GLfloat mat_light[] = { 0.8, 0.8, 0.8, 1.0 };
     glMaterialfv(GL_FRONT, GL_DIFFUSE, mat_black);
-    glMaterialfv(GL_FRONT, GL_AMBIENT, mat_black);
+    glMaterialfv(GL_FRONT, GL_AMBIENT, mat_light);
 
     glCallList(shapeDList);
     
