@@ -16,9 +16,10 @@
 		E64A3F6B121AD904006DEFD1 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E64A3F6A121AD904006DEFD1 /* OpenGL.framework */; };
 		E64A3F6E121AD916006DEFD1 /* QTKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E64A3F6C121AD916006DEFD1 /* QTKit.framework */; };
 		E64A3F6F121AD916006DEFD1 /* QuickTime.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E64A3F6D121AD916006DEFD1 /* QuickTime.framework */; };
+		F61313821221398E00198A73 /* freshnel.fs in Resources */ = {isa = PBXBuildFile; fileRef = F61313801221398E00198A73 /* freshnel.fs */; };
+		F61313831221398E00198A73 /* freshnel.vs in Resources */ = {isa = PBXBuildFile; fileRef = F61313811221398E00198A73 /* freshnel.vs */; };
 		F64DEBC31221270900C8F125 /* hpCinderCommons.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F64DEBC11221270900C8F125 /* hpCinderCommons.cpp */; };
 		F6A8A6F31220690000E74482 /* Ghost_frag.glsl in Resources */ = {isa = PBXBuildFile; fileRef = F68CA7A0121FFBE900160EB2 /* Ghost_frag.glsl */; };
-		F6A8A6F41220690300E74482 /* Ghost_vert.glsl in Resources */ = {isa = PBXBuildFile; fileRef = F68CA7A1121FFBE900160EB2 /* Ghost_vert.glsl */; };
 		F6B9E0A0121B0E8900C6056D /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F6B9E09F121B0E8900C6056D /* main.cpp */; };
 		F6C1E6E4122073B6005EA4CE /* shapefile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F6B9A486121ED615008494C5 /* shapefile.cpp */; };
 		F6C1E6E5122073BB005EA4CE /* Globe.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F66A03B5121FF8A600FF5B7E /* Globe.cpp */; };
@@ -48,6 +49,8 @@
 		E64A3F6C121AD916006DEFD1 /* QTKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QTKit.framework; path = Xcode4/SDKs/MacOSX10.6.sdk/System/Library/Frameworks/QTKit.framework; sourceTree = SDKROOT; };
 		E64A3F6D121AD916006DEFD1 /* QuickTime.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuickTime.framework; path = Xcode4/SDKs/MacOSX10.6.sdk/System/Library/Frameworks/QuickTime.framework; sourceTree = SDKROOT; };
 		F608636A122078F400609F40 /* shapefile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = shapefile.h; path = src/shapefile.h; sourceTree = "<group>"; };
+		F61313801221398E00198A73 /* freshnel.fs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = freshnel.fs; path = shaders/freshnel.fs; sourceTree = "<group>"; };
+		F61313811221398E00198A73 /* freshnel.vs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = freshnel.vs; path = shaders/freshnel.vs; sourceTree = "<group>"; };
 		F64DEBC11221270900C8F125 /* hpCinderCommons.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = hpCinderCommons.cpp; path = src/hpCinderCommons.cpp; sourceTree = "<group>"; };
 		F64DEBC21221270900C8F125 /* hpCinderCommons.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = hpCinderCommons.h; path = src/hpCinderCommons.h; sourceTree = "<group>"; };
 		F66A03B5121FF8A600FF5B7E /* Globe.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Globe.cpp; path = src/Globe.cpp; sourceTree = "<group>"; };
@@ -116,6 +119,8 @@
 		E61EEB90121AD41E00DEE5DE /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				F61313801221398E00198A73 /* freshnel.fs */,
+				F61313811221398E00198A73 /* freshnel.vs */,
 				F6CC5592121B318400ADBED3 /* TM_WORLD_BORDERS_SIMPL-0.3.dbf */,
 				F6CC5593121B318400ADBED3 /* TM_WORLD_BORDERS_SIMPL-0.3.prj */,
 				F6CC5594121B318400ADBED3 /* TM_WORLD_BORDERS_SIMPL-0.3.shp */,
@@ -237,7 +242,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F6A8A6F41220690300E74482 /* Ghost_vert.glsl in Resources */,
 				F6A8A6F31220690000E74482 /* Ghost_frag.glsl in Resources */,
 				F6CC55BB121B318400ADBED3 /* TM_WORLD_BORDERS_SIMPL-0.3.dbf in Resources */,
 				F6CC55BC121B318400ADBED3 /* TM_WORLD_BORDERS_SIMPL-0.3.prj in Resources */,
@@ -247,6 +251,8 @@
 				F6CC55C0121B318400ADBED3 /* TM_WORLD_BORDERS-0.3.prj in Resources */,
 				F6CC55C1121B318400ADBED3 /* TM_WORLD_BORDERS-0.3.shp in Resources */,
 				F6CC55C2121B318400ADBED3 /* TM_WORLD_BORDERS-0.3.shx in Resources */,
+				F61313821221398E00198A73 /* freshnel.fs in Resources */,
+				F61313831221398E00198A73 /* freshnel.vs in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
