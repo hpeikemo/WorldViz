@@ -80,10 +80,10 @@ void Globe::render() {
     gl::drawSphere( Vec3f(0.0f, 0.0f, 0.0f), 1.999f, 40 );    
     globeShader.unbind();
 
-    GLfloat mat_black[] = { 0.1, 0.1, 0.1, 1.0 };
+    GLfloat mat_black[] = { 0.1, 0.4, 0.1, 1.0 };
     GLfloat mat_light[] = { 0.8, 0.8, 0.8, 1.0 };
-    glMaterialfv(GL_FRONT, GL_DIFFUSE, mat_black);
-    glMaterialfv(GL_FRONT, GL_AMBIENT, mat_light);
+    glMaterialfv(GL_FRONT, GL_DIFFUSE, mat_light);
+    glMaterialfv(GL_FRONT, GL_AMBIENT, mat_black);
 
     glCallList(shapeDList);
     

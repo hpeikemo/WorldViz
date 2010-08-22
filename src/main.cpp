@@ -132,20 +132,36 @@ void WorldWizApp::draw() {
     glPushMatrix();
     glLoadIdentity();
     
-    glTranslatef( -15., 0, 0 );
-    orbitDegrees += 0.1f;
-    glRotatef(orbitDegrees, 0.f, 1.f, 0.5f);
-    
+    glPushMatrix();
 
-    GLfloat light_position[] = { 8.0, 8.0, 8.0, 1.0 };
+    glLoadIdentity();
+    GLfloat light_position[] = { -10.0, 4.0, 0.0, 1.0 };
     glLightfv(GL_LIGHT0, GL_POSITION, light_position);
-    
     GLfloat lm_ambient[] = { 0.5, 0.5, 0.5, 1.0 };    
     glLightModelfv(GL_LIGHT_MODEL_AMBIENT, lm_ambient);    
     glEnable(GL_LIGHTING);
     glEnable(GL_LIGHT0);
+
+    glPopMatrix();
+    
+    glTranslatef( -15., 0, 0 );
+    orbitDegrees += 0.3f;
+    glRotatef(orbitDegrees, 0.f, 1.f, 0.5f);
+    
+
+    
     glEnable(GL_DEPTH_TEST);
-    glShadeModel(GL_FLAT); //glShadeModel(GL_SMOOTH);
+    glEnable(GL_LINE_SMOOTH);
+    glEnable(GL_POINT_SMOOTH);
+    //glEnable(GL_POLYGON_SMOOTH);
+    
+    glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
+    glEnable(GL_BLEND);
+    glEnable(GL_MULTISAMPLE);
+    
+    glShadeModel(GL_FLAT);//glShadeModel(GL_SMOOTH);
+    
+    glLineWidth(1.5);
     
     world.render();        
     
