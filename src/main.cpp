@@ -25,6 +25,7 @@
 #include "Resources.h"
 #include "shapefile.h"
 #include "Globe.h"
+#include "hpCinderCommons.h"
 
 using std::list;
 
@@ -47,34 +48,18 @@ public:
 };
 
 
-
-
-
 void WorldWizApp::prepareSettings( Settings* settings ) {
     settings->setWindowSize( 1280 , 720 );
     settings->setFrameRate( 30.0 );
 }
 
 
-gl::GlslProg loadShader(DataSourceRef vertexShader, DataSourceRef fragmentShader = DataSourceRef(),DataSourceRef geometryShader = DataSourceRef()) {
-    gl::GlslProg shader;    
-    try {
-        shader = gl::GlslProg( vertexShader, fragmentShader, geometryShader );
-    } catch( ci::gl::GlslProgCompileExc &exc ) {
-        std::cout << "Shader compile error: " << std::endl;
-        std::cout << exc.what();
-    } catch( ... ) {
-        std::cout << "Unable to load shader" << std::endl;
-    }
-    return shader;
-}
-
 void WorldWizApp::setup() {    
     
     loadShapefile( getResourcePath(RES_GLOBE_SHAPE), &world.borderShapes );
     world.update();
                 
-    world.globeShader = loadShader( loadResource( RES_GHOST_VERT ), loadResource( RES_GHOST_FRAG ) );
+    world.globeShader = hp::ciCommons::compileShader( loadResource( RES_GHOST_VERT ), loadResource( RES_GHOST_FRAG ) );
     
 }
 
@@ -100,7 +85,6 @@ void WorldWizApp::resize( int width, int height ) {
     gluLookAt(8,2,8, 0,0,0, 0,1,0);    
     glMatrixMode(GL_MODELVIEW);    
 }
-
 
 
 float orbitDegrees = 0.0f;

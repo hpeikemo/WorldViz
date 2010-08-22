@@ -16,6 +16,7 @@
 		E64A3F6B121AD904006DEFD1 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E64A3F6A121AD904006DEFD1 /* OpenGL.framework */; };
 		E64A3F6E121AD916006DEFD1 /* QTKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E64A3F6C121AD916006DEFD1 /* QTKit.framework */; };
 		E64A3F6F121AD916006DEFD1 /* QuickTime.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E64A3F6D121AD916006DEFD1 /* QuickTime.framework */; };
+		F64DEBC31221270900C8F125 /* hpCinderCommons.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F64DEBC11221270900C8F125 /* hpCinderCommons.cpp */; };
 		F6A8A6F31220690000E74482 /* Ghost_frag.glsl in Resources */ = {isa = PBXBuildFile; fileRef = F68CA7A0121FFBE900160EB2 /* Ghost_frag.glsl */; };
 		F6A8A6F41220690300E74482 /* Ghost_vert.glsl in Resources */ = {isa = PBXBuildFile; fileRef = F68CA7A1121FFBE900160EB2 /* Ghost_vert.glsl */; };
 		F6B9E0A0121B0E8900C6056D /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F6B9E09F121B0E8900C6056D /* main.cpp */; };
@@ -47,6 +48,8 @@
 		E64A3F6C121AD916006DEFD1 /* QTKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QTKit.framework; path = Xcode4/SDKs/MacOSX10.6.sdk/System/Library/Frameworks/QTKit.framework; sourceTree = SDKROOT; };
 		E64A3F6D121AD916006DEFD1 /* QuickTime.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuickTime.framework; path = Xcode4/SDKs/MacOSX10.6.sdk/System/Library/Frameworks/QuickTime.framework; sourceTree = SDKROOT; };
 		F608636A122078F400609F40 /* shapefile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = shapefile.h; path = src/shapefile.h; sourceTree = "<group>"; };
+		F64DEBC11221270900C8F125 /* hpCinderCommons.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = hpCinderCommons.cpp; path = src/hpCinderCommons.cpp; sourceTree = "<group>"; };
+		F64DEBC21221270900C8F125 /* hpCinderCommons.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = hpCinderCommons.h; path = src/hpCinderCommons.h; sourceTree = "<group>"; };
 		F66A03B5121FF8A600FF5B7E /* Globe.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Globe.cpp; path = src/Globe.cpp; sourceTree = "<group>"; };
 		F66A03B6121FF8A600FF5B7E /* Globe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Globe.h; path = src/Globe.h; sourceTree = "<group>"; };
 		F68CA7A0121FFBE900160EB2 /* Ghost_frag.glsl */ = {isa = PBXFileReference; lastKnownFileType = text; name = Ghost_frag.glsl; path = shaders/Ghost_frag.glsl; sourceTree = "<group>"; };
@@ -156,6 +159,7 @@
 			isa = PBXGroup;
 			children = (
 				F66A03B5121FF8A600FF5B7E /* Globe.cpp */,
+				F64DEBC11221270900C8F125 /* hpCinderCommons.cpp */,
 				F6B9A486121ED615008494C5 /* shapefile.cpp */,
 				F6B9E09F121B0E8900C6056D /* main.cpp */,
 			);
@@ -165,6 +169,7 @@
 		F66A03AF121FF5D500FF5B7E /* Headers */ = {
 			isa = PBXGroup;
 			children = (
+				F64DEBC21221270900C8F125 /* hpCinderCommons.h */,
 				F608636A122078F400609F40 /* shapefile.h */,
 				F6A8A6E91220650500E74482 /* model.h */,
 				F66A03B6121FF8A600FF5B7E /* Globe.h */,
@@ -255,6 +260,7 @@
 				F6B9E0A0121B0E8900C6056D /* main.cpp in Sources */,
 				F6C1E6E4122073B6005EA4CE /* shapefile.cpp in Sources */,
 				F6C1E6E5122073BB005EA4CE /* Globe.cpp in Sources */,
+				F64DEBC31221270900C8F125 /* hpCinderCommons.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
