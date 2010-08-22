@@ -12,14 +12,14 @@
 
 using namespace ci;
 
-Vec3f coordinateToPoint(double x, double y) {   
-    float r  = 2.0f;
+Vec3f coordinateToPoint(double x, double y, double a=0.0f) {   
+    float r  = 2.0f+a;
     float p  = cos( (y/180.0f) *M_PI );
     float pz = cos( (x/180.0f) *M_PI ) * r *p;
     float px = sin( (x/180.0f) *M_PI ) * r *p;
     float py = sin( (y/180.0f) *M_PI ) * r;
     return Vec3f(px,py,pz);            
-    //    return Vec3f(x/50,y/50,0);            
+    //   return Vec3f(x/50,y/50,0);          
 }
 
 void drawShapefile(shapefileData *data) {
@@ -62,7 +62,9 @@ void drawShapefile(shapefileData *data) {
 }
 
 
-
+Vec3f Globe::toVec3f(double x,double y, double a) {
+    return coordinateToPoint(x, y, a);    
+}
 
 void Globe::update() {
     

@@ -66,8 +66,8 @@ void main() {
 
 	vec4 eyeVertex = gl_ModelViewMatrix * gl_Vertex;		vec3 normal = normalize(gl_NormalMatrix * gl_Normal);
 
-	cameraDiff = dot(normal,normalize(eyeVertex.xyz))+1. ;
-	cameraDiff = cameraDiff/2.;
+	cameraDiff = dot(normal,normalize(eyeVertex.xyz))+0.7 ;
+	cameraDiff = cameraDiff/1.3;
 	
 	gl_Position = ftransform();
 

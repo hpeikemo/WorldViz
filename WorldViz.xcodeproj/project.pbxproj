@@ -18,6 +18,7 @@
 		E64A3F6F121AD916006DEFD1 /* QuickTime.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E64A3F6D121AD916006DEFD1 /* QuickTime.framework */; };
 		F61313821221398E00198A73 /* freshnel.fs in Resources */ = {isa = PBXBuildFile; fileRef = F61313801221398E00198A73 /* freshnel.fs */; };
 		F61313831221398E00198A73 /* freshnel.vs in Resources */ = {isa = PBXBuildFile; fileRef = F61313811221398E00198A73 /* freshnel.vs */; };
+		F6362CA71221BBB1003ADF92 /* Trajectory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F6362CA51221BBB1003ADF92 /* Trajectory.cpp */; };
 		F64DEBC31221270900C8F125 /* hpCinderCommons.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F64DEBC11221270900C8F125 /* hpCinderCommons.cpp */; };
 		F666A15A1221965300A9ADD3 /* icon.tiff in Resources */ = {isa = PBXBuildFile; fileRef = F666A1591221965300A9ADD3 /* icon.tiff */; };
 		F666A15D122196A000A9ADD3 /* icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = F666A15C122196A000A9ADD3 /* icon.icns */; };
@@ -26,7 +27,7 @@
 		F6C1E6E4122073B6005EA4CE /* shapefile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F6B9A486121ED615008494C5 /* shapefile.cpp */; };
 		F6C1E6E5122073BB005EA4CE /* Globe.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F66A03B5121FF8A600FF5B7E /* Globe.cpp */; };
 		F6CC5524121B1CB200ADBED3 /* safileio.o in Frameworks */ = {isa = PBXBuildFile; fileRef = F6CC5522121B1CB200ADBED3 /* safileio.o */; };
-		F6CC5525121B1CB200ADBED3 /* shpopen.o in Frameworks */ = {isa = PBXBuildFile; fileRef = F6CC5523121B1CB200ADBED3 /* shpopen.o */; };
+		F6CC5525121B1CB200ADBED3 /* shpopen.o in Frameworks */ = {isa = PBXBuildFile; fileRef = F6CC5523121B1CB200ADBED3 /* shpopen.o */; settings = {ATTRIBUTES = (Required, ); }; };
 		F6CC55BB121B318400ADBED3 /* TM_WORLD_BORDERS_SIMPL-0.3.dbf in Resources */ = {isa = PBXBuildFile; fileRef = F6CC5592121B318400ADBED3 /* TM_WORLD_BORDERS_SIMPL-0.3.dbf */; };
 		F6CC55BC121B318400ADBED3 /* TM_WORLD_BORDERS_SIMPL-0.3.prj in Resources */ = {isa = PBXBuildFile; fileRef = F6CC5593121B318400ADBED3 /* TM_WORLD_BORDERS_SIMPL-0.3.prj */; };
 		F6CC55BD121B318400ADBED3 /* TM_WORLD_BORDERS_SIMPL-0.3.shp in Resources */ = {isa = PBXBuildFile; fileRef = F6CC5594121B318400ADBED3 /* TM_WORLD_BORDERS_SIMPL-0.3.shp */; };
@@ -53,6 +54,8 @@
 		F608636A122078F400609F40 /* shapefile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = shapefile.h; path = src/shapefile.h; sourceTree = "<group>"; };
 		F61313801221398E00198A73 /* freshnel.fs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = freshnel.fs; path = shaders/freshnel.fs; sourceTree = "<group>"; };
 		F61313811221398E00198A73 /* freshnel.vs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = freshnel.vs; path = shaders/freshnel.vs; sourceTree = "<group>"; };
+		F6362CA51221BBB1003ADF92 /* Trajectory.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Trajectory.cpp; path = src/Trajectory.cpp; sourceTree = "<group>"; };
+		F6362CA61221BBB1003ADF92 /* Trajectory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Trajectory.h; path = src/Trajectory.h; sourceTree = "<group>"; };
 		F64DEBC11221270900C8F125 /* hpCinderCommons.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = hpCinderCommons.cpp; path = src/hpCinderCommons.cpp; sourceTree = "<group>"; };
 		F64DEBC21221270900C8F125 /* hpCinderCommons.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = hpCinderCommons.h; path = src/hpCinderCommons.h; sourceTree = "<group>"; };
 		F666A1591221965300A9ADD3 /* icon.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = icon.tiff; sourceTree = "<group>"; };
@@ -102,8 +105,6 @@
 		E61EEB87121AD41E00DEE5DE = {
 			isa = PBXGroup;
 			children = (
-				F666A15C122196A000A9ADD3 /* icon.icns */,
-				F666A1591221965300A9ADD3 /* icon.tiff */,
 				F68CA7A2121FFBEE00160EB2 /* Shaders */,
 				E64A3F1C121AD58A006DEFD1 /* Source */,
 				F66A03AF121FF5D500FF5B7E /* Headers */,
@@ -117,6 +118,8 @@
 		E61EEB8F121AD41E00DEE5DE /* Other Sources */ = {
 			isa = PBXGroup;
 			children = (
+				F666A15C122196A000A9ADD3 /* icon.icns */,
+				F666A1591221965300A9ADD3 /* icon.tiff */,
 				E61EEB9C121AD41E00DEE5DE /* WorldViz_Prefix.pch */,
 			);
 			name = "Other Sources";
@@ -170,6 +173,7 @@
 			isa = PBXGroup;
 			children = (
 				F66A03B5121FF8A600FF5B7E /* Globe.cpp */,
+				F6362CA51221BBB1003ADF92 /* Trajectory.cpp */,
 				F64DEBC11221270900C8F125 /* hpCinderCommons.cpp */,
 				F6B9A486121ED615008494C5 /* shapefile.cpp */,
 				F6B9E09F121B0E8900C6056D /* main.cpp */,
@@ -182,6 +186,7 @@
 			children = (
 				F64DEBC21221270900C8F125 /* hpCinderCommons.h */,
 				F608636A122078F400609F40 /* shapefile.h */,
+				F6362CA61221BBB1003ADF92 /* Trajectory.h */,
 				F6A8A6E91220650500E74482 /* model.h */,
 				F66A03B6121FF8A600FF5B7E /* Globe.h */,
 				F69C736D121FF3EB004F203F /* Resources.h */,
@@ -275,6 +280,7 @@
 				F6C1E6E4122073B6005EA4CE /* shapefile.cpp in Sources */,
 				F6C1E6E5122073BB005EA4CE /* Globe.cpp in Sources */,
 				F64DEBC31221270900C8F125 /* hpCinderCommons.cpp in Sources */,
+				F6362CA71221BBB1003ADF92 /* Trajectory.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

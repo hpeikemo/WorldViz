@@ -10,12 +10,14 @@
 
 #include <OpenGL/glu.h>
 #include "shapefile.h"
+#include "cinder/Vector.h"
 
 class Globe {
     public:
     
         void update();
         void render();
+        ci::Vec3f toVec3f(double x,double y, double a=0.0f);
         
         shapefileData   borderShapes;
         ci::gl::GlslProg    globeShader;

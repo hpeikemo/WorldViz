@@ -27,7 +27,10 @@
 #include "Resources.h"
 #include "shapefile.h"
 #include "Globe.h"
+#include "Trajectory.h"
 #include "hpCinderCommons.h"
+
+
 
 using std::list;
 
@@ -57,6 +60,9 @@ void WorldWizApp::prepareSettings( Settings* settings ) {
 }
 
 
+
+Trajectory testTrajectory;
+
 void WorldWizApp::load() {    
     world.globeShader = hp::ciCommons::compileShader( loadResource( RES_GHOST_VERT ), loadResource( RES_GHOST_FRAG ) );
     
@@ -65,6 +71,15 @@ void WorldWizApp::load() {
     world.globeShader = hp::ciCommons::compileShader( 
                                                      cinder::DataSourcePath::createRef( "/Users/hpe/Dropbox/Work/C++/WorldViz/shaders/freshnel.vs" ),
                                                      cinder::DataSourcePath::createRef( "/Users/hpe/Dropbox/Work/C++/WorldViz/shaders/freshnel.fs" )); */
+    
+    testTrajectory.originPoint.x = 115.6f;
+    testTrajectory.originPoint.y = -28.8f;
+    
+    testTrajectory.targetPoint.x = -80.9f;
+    testTrajectory.targetPoint.y = 26.6f;
+    
+    testTrajectory.apex = .4f;
+
 }
 
 void WorldWizApp::setup() {    
@@ -165,7 +180,11 @@ void WorldWizApp::draw() {
     
     world.render();        
     
+    testTrajectory.render(&world);
+    
     glPopMatrix();
+    
+    
 
     
 }
