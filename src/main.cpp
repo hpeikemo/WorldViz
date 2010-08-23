@@ -14,7 +14,6 @@
 #include "cinder/gl/gl.h"
 #include "cinder/DataSource.h"
 
-
 #include <cstring>
 #include <list>
 #include <math.h>

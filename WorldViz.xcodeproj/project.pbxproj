@@ -233,7 +233,6 @@
 			};
 			buildConfigurationList = E61EEB8C121AD41E00DEE5DE /* Build configuration list for PBXProject "WorldViz" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
